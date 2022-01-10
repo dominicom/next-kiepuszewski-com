@@ -1,0 +1,23 @@
+.nav {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  @media screen and (min-width: 640px) {
+    flex-direction: row;
+  }
+}
+
+.nav a {
+  padding: 1rem 1rem 1rem 0;
+  text-decoration: none;
+  color: coral;
+  transition: 300ms;
+}
+
+.nav a:hover {
+  color: blue;
+}
+
+
