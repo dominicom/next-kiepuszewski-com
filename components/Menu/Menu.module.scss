@@ -1,4 +1,5 @@
 .nav {
+  padding: 1rem;
   position: fixed;
   display: flex;
   flex-wrap: wrap;
@@ -7,17 +8,20 @@
   @media screen and (min-width: 640px) {
     flex-direction: row;
   }
-}
+  .link {
+    padding: 1rem 1rem 1rem 0;
+    text-decoration: none;
+    color: coral;
+    transition: 300ms;
+    &:hover {
+      color: blue;
+    }
 
-.nav a {
-  padding: 1rem 1rem 1rem 0;
-  text-decoration: none;
-  color: coral;
-  transition: 300ms;
-}
-
-.nav a:hover {
-  color: blue;
+  }
+  .active {
+    color: rebeccapurple;
+    text-decoration: underline;
+  }
 }
 
 

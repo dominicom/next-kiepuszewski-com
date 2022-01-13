@@ -1,0 +1,12 @@
+@import 'styles/variables.scss';
+
+$fade-color: $gray-70;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;  
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}

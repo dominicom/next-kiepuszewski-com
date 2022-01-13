@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+
+
+$font-stack-sans-01: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+sans-serif;
+
+$font-stack-sans-02: 'Chivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+sans-serif;
+
+$font-stack-sans-03: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+sans-serif;
+
+$font-stack-grotesk-01: 'Inter', sans-serif;
+$font-stack-grotesk-02: 'HK Grotesk', sans-serif;
+$font-stack-grotesk-03: 'Manrope', sans-serif;
+
+
+$font-stack: $font-stack-grotesk-01;
+
+$navigation-width: 16rem;
+$layout-padding-compact: 2rem;
+$layout-padding: 3rem;
+
+$white: #fff;
+
+$gray-10: #f4f4f4;
+$gray-20: #e0e0e0;
+$gray-30: #c6c6c6;
+$gray-40: #a8a8a8;
+$gray-50: #8d8d8d;
+$gray-60: #6f6f6f;
+$gray-70: #525252;
+$gray-80: #393939;
+$gray-90: #262626;
+$gray-100: #161616;
+
+$black: #000;
+
+$rebecapurple: #663399;
+$navy: #00007b;
+$blue: #0000ff;
+
+$primary: $rebecapurple;
+$secondary: $white;
+
+// Alphas
+$white-95: rgba( $white, 0.95 );
+$white-90: rgba( $white, 0.9  );
+$white-85: rgba( $white, 0.85 );
+$white-80: rgba( $white, 0.8  );
+$white-75: rgba( $white, 0.75 );
+$white-65: rgba( $white, 0.65 );
+$white-60: rgba( $white, 0.6  );
+$white-55: rgba( $white, 0.55 );
+$white-50: rgba( $white, 0.5  );
+$white-50: rgba( $white, 0.5  );
+$white-45: rgba( $white, 0.45 );
+$white-40: rgba( $white, 0.4  );
+$white-35: rgba( $white, 0.35 );
+$white-30: rgba( $white, 0.3  );
+$white-25: rgba( $white, 0.25 );
+$white-20: rgba( $white, 0.2  );
+$white-15: rgba( $white, 0.15 );
+$white-10: rgba( $white, 0.1  );
+$white-05: rgba( $white, 0.05 );
+$white-0:  rgba( $white, 0    );
+
+$black-95: rgba( $black, 0.95 );
+$black-90: rgba( $black, 0.9  );
+$black-85: rgba( $black, 0.85 );
+$black-80: rgba( $black, 0.8  );
+$black-75: rgba( $black, 0.75 );
+$black-70: rgba( $black, 0.7  );
+$black-65: rgba( $black, 0.65 );
+$black-60: rgba( $black, 0.6  );
+$black-55: rgba( $black, 0.55 );
+$black-50: rgba( $black, 0.5  );
+$black-45: rgba( $black, 0.45 );
+$black-40: rgba( $black, 0.4  );
+$black-35: rgba( $black, 0.35 );
+$black-30: rgba( $black, 0.3  );
+$black-25: rgba( $black, 0.25 );
+$black-20: rgba( $black, 0.2  );
+$black-15: rgba( $black, 0.15 );
+$black-10: rgba( $black, 0.1  );
+$black-05: rgba( $black, 0.05 );
+$black-0:  rgba( $black, 0    );
+
+
+
+$layout-0:  320px;
+$layout-xs: 480px;
+$layout-sm: 768px;
+$layout-md: 1024px;
+$layout-lg: 1280px;
+$layout-xl: 1920px;
+
+
+$breakpoint: $layout-md;
