@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
@@ -22,15 +23,18 @@ export default function About() {
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <Link href="/work/docu">
+            <a className={styles.card}>
+              <h2>Docu &rarr;</h2>
+              <p>Find in-depth information about Next.js features and API.</p>
+            </a>
+          </Link>
+          <Link href="/work/zwei">
+            <a className={styles.card}>
+              <h2>Zwei &rarr;</h2>
+              <p>Learn about Next.js in an interactive course with quizzes!</p>
+            </a>
+          </Link>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"

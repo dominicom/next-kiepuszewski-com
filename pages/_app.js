@@ -1,9 +1,23 @@
-import { Menu } from 'modules/Menu';
-import Image from 'next/image'
+import { Menu, Footer } from 'modules';
 
-import styles from '../styles/Home.module.css'
 import 'styles/globals.scss'
 import 'styles/modules.scss'
+import 'styles/layout.scss'
+
+
+// This example make job!
+// https://github.com/vercel/next.js/tree/canary/examples/blog-starter
+// as here @Docs
+// https://nextjs.org/blog/markdown#sharing-layout
+
+// Pre-rendered pages layouts
+// https://nextjs.org/docs/basic-features/pages#static-generation-with-data
+
+// Layouts
+// https://nextjs.org/docs/basic-features/layouts
+
+// Slugs in Link List
+// https://nextjs.org/docs/api-reference/next/link
 
 function App({ Component, pageProps }) {
   return (
@@ -12,18 +26,7 @@ function App({ Component, pageProps }) {
       <main>
         <Component {...pageProps} />
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <Footer />
     </>
   )
 }

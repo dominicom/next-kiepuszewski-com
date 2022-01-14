@@ -1,0 +1,35 @@
+@import 'styles/variables.scss';
+
+
+.Page-container {
+  &[class*="g10"] {
+    color: $gray-100;
+    background-color: $gray-10;
+  }
+  &[class*="g20"] {
+    color: $gray-100;
+    background-color: $gray-20;
+  }
+  &[class*="g90"] {
+    color: $white;
+    background-color: $gray-90;
+  }
+  &[class*="g100"] {
+    color: $white;
+    background-color: $gray-100;
+  }
+}
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
