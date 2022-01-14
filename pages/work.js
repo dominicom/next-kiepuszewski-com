@@ -29,9 +29,17 @@ export default function About() {
               <p>Find in-depth information about Next.js features and API.</p>
             </a>
           </Link>
+
           <Link href="/work/zwei">
             <a className={styles.card}>
               <h2>Zwei &rarr;</h2>
+              <p>Learn about Next.js in an interactive course with quizzes!</p>
+            </a>
+          </Link>
+
+          <Link href="/work/ux-ui/zwei">
+            <a className={styles.card}>
+              <h2>Zwei UX-UI &rarr;</h2>
               <p>Learn about Next.js in an interactive course with quizzes!</p>
             </a>
           </Link>
@@ -55,19 +63,6 @@ export default function About() {
           </a>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }

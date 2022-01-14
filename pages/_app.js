@@ -19,6 +19,8 @@ import 'styles/layout.scss'
 // Slugs in Link List
 // https://nextjs.org/docs/api-reference/next/link
 
+// https://www.smashingmagazine.com/2021/06/client-side-routing-next-js/
+
 function App({ Component, pageProps }) {
   return (
     <>

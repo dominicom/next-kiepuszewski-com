@@ -1,6 +1,6 @@
 @import 'styles/variables.scss';
 
-$size: 5.5rem;
+$size: 3.75rem;
 
 .dtm-Menu {
   position: relative;
@@ -42,11 +42,7 @@ $size: 5.5rem;
 .menu-link:hover rect {
   fill: currentColor;
 }
-// .menu-link:visited, .menu-link:visited:hover {
-//   rect {
-//     fill: red;
-//   }
-// }
+
 .MenuItem:hover {
   .MenuItem-label {
     fill: $black;
