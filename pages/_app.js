@@ -1,8 +1,9 @@
-import { Menu } from 'components/Menu';
+import { Menu } from 'modules/Menu';
 import Image from 'next/image'
 
 import styles from '../styles/Home.module.css'
 import 'styles/globals.scss'
+import 'styles/modules.scss'
 
 function App({ Component, pageProps }) {
   return (
