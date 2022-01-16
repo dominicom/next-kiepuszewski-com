@@ -11,6 +11,7 @@ import { cn } from 'utils/helpers';
 import { pages } from 'utils/settings';
 import { useRouter } from "next/router";
 import { Work, About, Contact } from './Items';
+import { HeaderItem } from 'modules/Header';
 
 import styles from './Menu.module.scss';
 
@@ -44,18 +45,20 @@ export function Menu(props) {
 
 const NavLink = props => {
   // const {} = props;
+
+  // ToDo aria labels, alt texts
   const classes = cn(styles.item, 'MenuItem', 'menu-link', 'themed-color', props.activeClassName);  // , selected ? "selected" : "", hash, selected  && "selected"
   return( 
-
+    <HeaderItem>
       <Link {...props}>
-        <a className={classes}>
+        <a className={classes} aria-label={props.label}>
           <MenuNavElement label={props.label} />
         </a>
         {/* <div>
           <a className={props.className} onClick={props.onClick}>{props.name}</a>
         </div> */}
       </Link>
-
+    </HeaderItem>
   );
 }
 
@@ -76,52 +79,4 @@ const MenuNavElement = props => {
       return <small>Unknown element: {props.label}</small>
   }
 }
-
-/*
-export const MenuItem = props => {
-  const {
-    path,
-    hash,
-    // selected,
-    page,
-    global,
-  } = props;
-
-  const location = useLocation();
-
-  const selected = `#${hash}` === location.hash ? true : false;
-  // console.log(hash, location.hash)
-  // console.log(selected)
-  const classes = cn("MenuItem", "menu-link", "themed-color", hash, selected  && "selected");  // , selected ? "selected" : ""
-  // const classes = cn("MenuItem", "menu-link", "themed-color", page, selected === page && "selected");  // , selected ? "selected" : ""
-  return (
-    <NavLink
-      // strict
-      smooth
-      // scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
-      // to={path}
-      to={{ 
-        hash: hash,
-        pathname: path, 
-        // pathname: `${path}#${hash}`, 
-        state: { page: page, global: global }
-      }}
-      className={classes}
-      activeClassName="selected"
-      aria-label={page}
-      onMouseEnter={props.onMouseEnter}
-      onClick={props.onClick}
-    >
-      <MenuNavElement label={hash || page} />
-    </NavLink>
-  );
-}
-*/
-
-// TO-DO or DELETE
-
-// eslint-disable-next-line
-const Label = () => {
-};
-
 

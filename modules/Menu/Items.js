@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Work = () => (
-  <svg viewBox="0 0 60 60">
+  <svg viewBox="0 0 60 60" focusable="false">
     <g className="MenuItem-label">
       <polygon points="57.65 20.98 53.41 20.98 45.91 28.48 45.03 28.48 45.03 20.98 42.03 20.98 42.03 38.98 45.03 38.98 45.03 31.48 45.91 31.48 53.41 38.98 57.65 38.98 48.65 29.98 57.65 20.98"/>
       <path d="M33,0a9,9,0,1,0,9,9A9,9,0,0,0,33,0Zm0,15a6,6,0,1,1,6-6A6,6,0,0,1,33,15Z"/>
@@ -14,7 +14,7 @@ export const Work = () => (
 );
 
 export const About = () => (
-  <svg viewBox="0 0 60 60">
+  <svg viewBox="0 0 60 60" focusable="false">
     <g className="MenuItem-label">
       <polygon points="60,20.9 45,20.9 45,23.9 51,23.9 51,38.9 54,38.9 54,23.9 60,23.9 "/>
       <path d="M13.1,18h3L9.6,0h-3L0,18h3l1.1-3H12L13.1,18z M5.2,12l2.9-7.9l2.9,7.9H5.2z"/>
@@ -30,7 +30,7 @@ export const About = () => (
 );
 
 export const Contact = () => (
-  <svg viewBox="0 0 80 60">
+  <svg viewBox="0 0 80 60" focusable="false">
     <g className="MenuItem-label">
       <path d="M13.2,13.2C12.1,14.3,10.6,15,9,15c-3.3,0-6-2.7-6-6s2.7-6,6-6c1.7,0,3.2,0.7,4.2,1.8l2.1-2.1C13.7,1,11.5,0,9,0
         C4,0,0,4,0,9c0,5,4,9,9,9c2.5,0,4.7-1,6.4-2.6L13.2,13.2z"/>
