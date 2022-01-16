@@ -1,0 +1,44 @@
+@import 'styles/variables.scss';
+
+.module {
+  // padding: 1rem;
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  // flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  @media screen and (min-width: 640px) {
+    flex-direction: row;
+  }
+  li {
+    display: flex;
+  }
+  .link {
+    padding: 1rem 1rem 1rem 0;
+    text-decoration: none;
+    color: coral;
+    transition: 300ms;
+    &:hover {
+      color: blue;
+    }
+
+  }
+  .active {
+    color: rebeccapurple;
+    text-decoration: underline;
+  }
+}
+
+.item {
+  padding: 1rem 3rem 1rem 1rem ;
+  height: 5.75rem;
+  margin-right: $space-02;
+  cursor: pointer;
+  &:hover {
+    background-color: $gray-10;
+  }
+}
+

@@ -8,111 +8,31 @@ import React, { Component } from 'react';
 // import { useLocation, useHistory } from 'react-router-dom';
 import Link from 'next/link';
 import { cn } from 'utils/helpers';
+import { pages } from 'utils/settings';
 import { useRouter } from "next/router";
 import { Work, About, Contact } from './Items';
 
-// import { pages } from 'utils/data';
+import styles from './Menu.module.scss';
 
-
-
-// import './Menu.scss';
-
-const pages = [
-  {
-    name: 'Home',
-    href: '/'
-  },
-  {
-    name: 'Work',
-    href: '/work',
-    as: '/work'
-  },
-  {
-    name: 'About',
-    href: '/about',
-    as: '/about'
-  },
-  {
-    name: 'Contact',
-    href: '/contact',
-    as: '/contact'
-  },
-  // {
-  //   name: 'Static generated',
-  //   href: '/ssg/[slug]',
-  //   as: '/ssg/static-generated'
-  // },
-  // {
-  //   name: 'Hybrid',
-  //   href: '/hybrid/[slug]',
-  //   as: '/hybrid/hybrid-ssr'
-  // },
-]
-
-const compactNavigation = pages;
+// ToDo menu items populatd on mobile devices 
+// const compactNavigation = pages;
 
 const navigation = pages.filter(item => (item.name !== "Home"));
-// const navigation = pages.filter(item => (item.menu !== undefined ));
-
-/*
-class Menu extends Component {
-
-  componentDidMount () {
-    //this.menuConstructor();
-  }
-
-  menuConstructor = state => {
-    // if (state) {
-    //   return compactNavigation;
-    // } else {
-    //   return navigation;
-    // }
-    return navigation;
-  }
-
-  handleHomeLink = page => {
-    
-    //console.log("pejdż from meni", page)
-  };
-
-  render () {
-    const { Consumer } = PageContext;
-    // && context.global === 'active'
-    // @Read about ContextAPI: https://www.toptal.com/react/react-context-api
-    return (
-
-
-              <div className="dtm-Menu">
-                <>
-                  {this.menuConstructor(context.mobile).map(item => 
-                    <MenuItem
-                      key={`menu-item-key-${item.hash}`}
-                      {...item}
-                      // selected={context.active}
-                      // onMouseEnter={() => context.showTeasePage(item)}
-                      showTeasePage={context.showTeasePage}
-                      onClick={context.mobile ? () => context.hideMenu() : null}
-                    />         
-                  )}
-                </>
-              </div>
-            
-    );
-  }
-}
-*/
-
 
 export function Menu(props) {
 
   const router = useRouter();
+
+  const classes = {
+    root: styles.module
+  }
   // className={styles.nav}
 
   // const classes = [styles.link, router.pathname === link.href && 'active']
 
   return (
     <>
-      <nav className="dtm-Menu">
+      <nav className={classes.root}>
 
           {/* {navigation.map((link,i) => <NavLink key={i} className={cn(styles.link, router.pathname === link.href && styles.active)} onClick={props.onClick} {...link} />)} */}
           {navigation.map((link,i) => <NavLink key={i} activeClassName={router.pathname === link.href && 'selected'} onClick={props.onClick} {...link} label={link.name} />)}
@@ -124,18 +44,17 @@ export function Menu(props) {
 
 const NavLink = props => {
   // const {} = props;
-  const classes = cn("MenuItem", "menu-link", "themed-color", props.activeClassName);  // , selected ? "selected" : "", hash, selected  && "selected"
-  return(
-    <>    
+  const classes = cn(styles.item, 'MenuItem', 'menu-link', 'themed-color', props.activeClassName);  // , selected ? "selected" : "", hash, selected  && "selected"
+  return( 
+
       <Link {...props}>
-        <div className={classes}>
+        <a className={classes}>
           <MenuNavElement label={props.label} />
-        </div>
+        </a>
         {/* <div>
           <a className={props.className} onClick={props.onClick}>{props.name}</a>
         </div> */}
       </Link>
-    </>
 
   );
 }

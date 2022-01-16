@@ -1,4 +1,10 @@
-import { Menu, Footer } from 'modules';
+import { 
+  Header, 
+  Menu, 
+  Footer 
+} from 'modules';
+
+
 
 import 'styles/globals.scss'
 import 'styles/modules.scss'
@@ -24,7 +30,9 @@ import 'styles/layout.scss'
 function App({ Component, pageProps }) {
   return (
     <>
-      <Menu />
+      <Header>
+        <Menu />
+      </Header>
       <main>
         <Component {...pageProps} />
       </main>

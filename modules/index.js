@@ -1,5 +1,6 @@
+import { Header } from './Header';
 import { Menu } from './Menu';
 import { Footer } from './Footer';
 
 
-export { Menu, Footer }
+export { Header, Menu, Footer }

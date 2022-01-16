@@ -45,7 +45,7 @@ const navigation = [
 ]
 
 
-function Menu(props) {
+export function Menu(props) {
 
   const router = useRouter();
   // className={styles.nav}
@@ -64,7 +64,7 @@ function Menu(props) {
   );
 }
 
-export { Menu };
+
 
 const NavLink = props => {
   // const {} = props;
