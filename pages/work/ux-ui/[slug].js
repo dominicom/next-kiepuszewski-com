@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
 
+import { Menu } from 'modules/Menu'
 
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
@@ -20,7 +21,7 @@ import Wrapper from 'layout/Wrapper'
 
 
 
-const components = {}
+const components = { Menu }
 
 export default function Work({ meta, source }) {
   return <Wrapper meta={meta}><MDXRemote {...source} components={components} /></Wrapper>

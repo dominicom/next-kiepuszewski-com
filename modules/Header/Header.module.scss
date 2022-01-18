@@ -1,13 +1,14 @@
 @import 'styles/variables.scss';
 
 .module {
-  position: relative;
   padding: 1rem;
+  color: $gray-60;
   // padding: 1rem 1rem 0 1rem;
   //background: blue;
   display: flex;
   width: 100%;
   position: fixed;
+  top: 0;
   z-index: 10000;
   transition: 150ms ease;
 }
@@ -17,12 +18,21 @@
   display: flex;
   margin-right: $space-02;
   background-color: $white;
-  transition: background-color 150ms;
+  transition: background-color 150ms, box-shadow 150ms;
+  // box-shadow: $elev-100;
+  // &:hover {
+  //   background-color: $gray-20;
+  // }
   &:hover {
-    background-color: $gray-20;
+    box-shadow: 0 0.25rem 0.5rem rgba($black, 0.125); //$elev-100;
+    z-index: 1000;
   }
   a {
     padding: 1rem;
     cursor: pointer;
   }
+}
+
+.globalModule {
+  flex: 1 1 0;
 }

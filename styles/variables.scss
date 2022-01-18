@@ -46,7 +46,7 @@ $rebecapurple: #663399;
 $navy: #00007b;
 $blue: #0000ff;
 
-$primary: $rebecapurple;
+$primary: $blue;
 $secondary: $white;
 
 // Alphas
@@ -92,14 +92,19 @@ $black-10: rgba( $black, 0.1  );
 $black-05: rgba( $black, 0.05 );
 $black-0:  rgba( $black, 0    );
 
+$elev-100: 0 2px 4px rgba(0, 0, 0, 0.25), 0 4px 8px rgba(0, 0, 0, 0.25);
+$elev-300: 0 4px 8px rgba(0, 0, 0, 0.25), 0 8px 16px rgba(0, 0, 0, 0.25);
+$elev-500: 0 8px 16px rgba(0, 0, 0, 0.25), 0 16px 32px rgba(0, 0, 0, 0.25);
+$elev-700: 0 16px 32px rgba(0, 0, 0, 0.25), 0 32px 64px rgba(0, 0, 0, 0.25);
 
 
-$layout-0:  320px;
-$layout-xs: 480px;
+
+$layout-0:  320;
+$layout-xs: 480;
 $layout-sm: 768px;
 $layout-md: 1024px;
-$layout-lg: 1280px;
-$layout-xl: 1920px;
+$layout-lg: 1280;
+$layout-xl: 1920;
 
 
 $breakpoint: $layout-md;

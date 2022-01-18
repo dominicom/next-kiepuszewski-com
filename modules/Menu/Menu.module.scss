@@ -1,8 +1,6 @@
 @import 'styles/variables.scss';
 
 .module {
-  // padding: 1rem;
-  position: fixed;
   display: flex;
   flex-wrap: wrap;
   // flex-direction: column;
@@ -16,20 +14,20 @@
   li {
     display: flex;
   }
-  .link {
-    padding: 1rem 1rem 1rem 0;
-    text-decoration: none;
-    color: coral;
-    transition: 300ms;
-    &:hover {
-      color: blue;
-    }
+  // .link {
+  //   padding: 1rem 1rem 1rem 0;
+  //   text-decoration: none;
+  //   color: coral;
+  //   transition: 300ms;
+  //   &:hover {
+  //     color: blue;
+  //   }
 
-  }
-  .active {
-    color: rebeccapurple;
-    text-decoration: underline;
-  }
+  // }
+  // .active {
+  //   color: rebeccapurple;
+  //   text-decoration: underline;
+  // }
 }
 
 .item {
@@ -37,8 +35,10 @@
   height: 5.75rem;
   margin-right: $space-02;
   cursor: pointer;
-  &:hover {
-    background-color: $gray-20;
-  }
+  
+  // &:hover {
+  //   box-shadow: $elev-300;
+  // //   background-color: $gray-20;
+  // }
 }
 

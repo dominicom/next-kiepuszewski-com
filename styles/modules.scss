@@ -17,10 +17,6 @@
 }
 
 
-
-
-
-
 .Header .FocusArea {
   position: fixed;
   top: 0;
@@ -51,39 +47,42 @@
 }
 
 
-.menu-link {
-  fill: $gray-80;
-  color: $blue;
-  background: $white;
+
+
+.MenuItem {
+  color: $gray-60;
   transition: 300ms;
+
+  .MenuItem-label {
+    fill: currentColor;
+  }
+
+  &:hover {
+    .MenuItem-label {
+      fill: $gray-100; //$black;
+    }
+  }
+}
+
+.menu-link {
   svg {
     height: 100%;
   }
   &.contact {
     width: 7rem;
   }
-
   rect, g {
     transition: 300ms;
   }
-  &:hover rect {
+  rect {
     fill: currentColor;
   }
+  &:hover rect {
+    fill: $primary;
+  }
   &.selected rect {
-    fill: currentColor;
+    fill: $primary;
     x: 0;
     width: 100%;
   }
-}
-
-.MenuItem:hover {
-  .MenuItem-label {
-    fill: $black;
-  }
-}
-
-.HomeLink {
-  // position: absolute;
-  top: -5.5rem;
-  z-index: 12000;
 }

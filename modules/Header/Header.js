@@ -76,6 +76,7 @@ const Header = ({
       <HeaderItem>
         <HomeButton />
       </HeaderItem>
+      <HeaderGlobalModule />
 {/* 
         <HomeButton 
           
@@ -113,7 +114,6 @@ const Header = ({
         {/* {mobile && <div><MenuItem hash={'work'} /></div>} */}
 
         <div className={classes.navigationModule}>
-        
           {children}
         </div>
 
@@ -129,3 +129,8 @@ export default Header;
 //     {children}
 //   </div>
 // )
+
+
+const HeaderGlobalModule = () => (
+  <div className={styles.globalModule} />
+)
