@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 
+
 // POSTS_PATH is useful when you want to get the path to a specific file
 export const POSTS_PATH = path.join(process.cwd(), 'pages/work')
 
@@ -12,8 +13,11 @@ export const postFilePaths = fs
   // Only include md(x) files
   .filter((path) => /\.mdx?$/.test(path))
 
+// fs module not found
+// https://stackoverflow.com/questions/64926174/module-not-found-cant-resolve-fs-in-next-js-application
 
-// Custom function
+// Custom function  (dir => ...)
 export const getFilePaths = (dir => fs
   .readdirSync(path.join(process.cwd(), dir))
   .filter((path) => /\.mdx?$/.test(path)))
+

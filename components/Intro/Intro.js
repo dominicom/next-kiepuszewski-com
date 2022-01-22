@@ -3,7 +3,7 @@ import { cn } from 'utils/helpers';
 
 import { Grid } from 'layout'
 
-import PORTRAIT from './img/portrait.png';
+import PORTRAIT from './img/portrait_glitch.png';
 
 import styles from './Intro.module.scss';
 

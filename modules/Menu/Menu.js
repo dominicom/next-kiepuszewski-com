@@ -65,7 +65,7 @@ const NavLink = props => {
 
 const MenuNavElement = props => {
 
-  console.log(props);
+  // console.log(props);
   switch (props.label) {
     case 'Home':
       return <Contact />

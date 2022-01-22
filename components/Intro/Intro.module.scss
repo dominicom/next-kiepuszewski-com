@@ -4,6 +4,7 @@
   padding-top: $header-space;
   width: 100%;
   height: calc(100vh - 7.5em);
+  min-height: 40rem;
   color: $white;
   background-color: $primary;
   position: relative;
@@ -16,10 +17,10 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  background-image: url(img/portrait.png);
+  background-image: url(img/portrait_glitch.png);
   background-position: left bottom;
   background-repeat: no-repeat;
-  background-size: 75vh 75vh;
+  background-size: 50vh 50vh;
   bottom: 0;
   left: 0;
 }

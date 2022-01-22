@@ -8,7 +8,7 @@ import { pages } from 'utils/settings';
 
 const route = pages[0];
 
-console.log(route);
+// console.log(route);
 
 // ToDo tweaking component type due to context
 const Component = ({ children, href, className }) => {

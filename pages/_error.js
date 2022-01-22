@@ -1,10 +1,21 @@
+import { Defaultpage } from 'templates/Defaultpage'
+import { Grid } from 'layout'
+
+// https://nextjs.org/docs/advanced-features/custom-error-page
+
+
+
 function Error({ statusCode }) {
   return (
-    <p>
-      {statusCode
-        ? `An error ${statusCode} occurred on server`
-        : 'An error occurred on client'}
-    </p>
+    <Defaultpage>
+      <Grid>
+      <p>
+        {statusCode
+          ? `An error ${statusCode} occurred on server`
+          : 'An error occurred on client'}
+      </p>
+      </Grid>
+    </Defaultpage>
   )
 }
 

@@ -1,6 +1,9 @@
+@import 'styles/variables.scss';
+
 //styleName: productive/heading-07;
 h1 {
   // font-family: Inter;
+  margin-top: $spacer-m;
   font-size: 54px;
   font-style: normal;
   font-weight: 300;

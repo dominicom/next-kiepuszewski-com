@@ -1,7 +1,9 @@
-<!--  import Wrapper from 'layout/Wrapper'
+import { Defaultpage } from 'templates/Defaultpage'
+import Markdown from 'modules/Markdown'
+import { MDX, MD } from 'components/MDX'
 
-export default ({ children }) => <Wrapper>{children}</Wrapper>;
--->
+export default ({ children }) => <Defaultpage><MDX source={children || '## No page here'} /></Defaultpage>;
+
 
 ## Docu
 

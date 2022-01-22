@@ -1,16 +1,21 @@
+import { MDXProvider } from '@mdx-js/react'
+
 import { 
   Header, 
-  Main,
+  // Main,
   Menu, 
   Footer 
 } from 'modules';
 
+import { Grid, Row } from 'layout/Grid';
 
 import 'styles/globals.scss'
 import 'styles/modules.scss'
 import 'styles/layout.scss'
 import 'styles/typography.scss'
 
+
+const components = { Menu, Grid, Row }
 
 // This example make job!
 // https://github.com/vercel/next.js/tree/canary/examples/blog-starter
@@ -35,7 +40,9 @@ function App({ Component, pageProps }) {
         <Menu />
       </Header>
 
+      <MDXProvider components={components}>
         <Component {...pageProps} />
+      </MDXProvider>
 
       <Footer />
     </>

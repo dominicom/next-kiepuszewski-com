@@ -1,0 +1,14 @@
+@import 'styles/variables.scss';
+
+.grid {
+  padding: { left: $spacer-3xl; right: $spacer-m; top: $spacer-m; bottom: $spacer-m };
+  @media screen and (max-width: $layout-sm) {
+    padding-left: $spacer-m;
+  }
+}
+
+
+.row {
+  display: flex;
+  // padding: { left: $spacer-3xl; right: $spacer-m; top: $spacer-m; bottom: $spacer-m };
+}

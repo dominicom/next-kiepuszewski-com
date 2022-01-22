@@ -1,31 +1,35 @@
-import path from 'path'
 import fs from 'fs'
+import path from 'path'
+
 import matter from 'gray-matter'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { Menu } from 'modules/Menu'
-
-
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
-// import { MDXProvider } from '@mdx-js/react'
+
 
 import { getFilePaths } from 'utils/mdxUtils'
 
-
-
-import Wrapper from 'layout/Wrapper'
-
-
+import { Grid } from 'layout/Grid';
+import { Defaultpage } from 'templates/Defaultpage'
 
 
 
-const components = { Menu }
+
+
+
 
 export default function Work({ meta, source }) {
-  return <Wrapper meta={meta}><MDXRemote {...source} components={components} /></Wrapper>
+  console.log(source, meta)
+  return (
+    <Defaultpage meta={meta}>
+      <Grid>
+        <MDXRemote {...source} />
+      </Grid>
+    </Defaultpage>
+  )
 }
 
 
@@ -64,6 +68,6 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: false, // was true
   }
 }
