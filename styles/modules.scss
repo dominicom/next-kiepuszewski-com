@@ -62,6 +62,12 @@
       fill: $gray-100; //$black;
     }
   }
+  &.inverted:hover {
+    background: $gray-60; 
+    .MenuItem-label {
+      fill: $gray-10; //$black;
+    }
+  }
 }
 
 .menu-link {
@@ -84,5 +90,8 @@
     fill: $primary;
     x: 0;
     width: 100%;
+  }
+  &.inverted:hover rect {
+    fill: $primary-02;
   }
 }

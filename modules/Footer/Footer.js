@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styles from './Footer.module.scss';
 
-export const Footer = () => {
+export default function Footer() {
   return(
     <footer className={styles.footer}>
       <div className={styles.container}>

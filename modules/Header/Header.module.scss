@@ -1,7 +1,10 @@
 @import 'styles/variables.scss';
 
 .module {
-  padding: 1rem;
+  padding: $space-16;
+  @media screen and (max-width: $layout-xs) {
+    padding: $space-12;
+  }
   color: $gray-60;
   // padding: 1rem 1rem 0 1rem;
   //background: blue;
@@ -11,12 +14,17 @@
   top: 0;
   z-index: 10000;
   transition: 150ms ease;
+
+  .substyle {
+    color: red;
+  }
 }
 
 .item {
-  height: 5.75rem;
+  // height: 5.75rem;
   display: flex;
-  margin-right: $space-02;
+  margin: { right: $space-02; bottom: $space-02 };
+
   background-color: $white;
   transition: background-color 150ms, box-shadow 150ms;
   // box-shadow: $elev-100;
@@ -28,7 +36,10 @@
     z-index: 1000;
   }
   a {
-    padding: 1rem;
+    padding: $space-16;
+    @media screen and (max-width: $layout-xs) {
+      padding: $space-12;
+    }
     cursor: pointer;
   }
 }

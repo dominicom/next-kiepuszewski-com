@@ -8,8 +8,8 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .footer {
@@ -17,14 +17,14 @@
   flex: 1;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .footer a {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   flex-grow: 1;
 }
 
@@ -47,7 +47,7 @@
 
 .title,
 .description {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .description {
@@ -57,7 +57,7 @@
 }
 
 .code {
-  background: #fafafa;
+  background: #333;
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
@@ -67,10 +67,11 @@
 
 .grid {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   flex-wrap: wrap;
   max-width: 800px;
+  margin: -1rem;
 }
 
 .card {

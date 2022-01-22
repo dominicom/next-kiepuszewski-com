@@ -1,15 +1,15 @@
 import { 
   Header, 
-  // Main,
+  Main,
   Menu, 
   Footer 
 } from 'modules';
 
-import Main from 'modules/Main/Main'
 
 import 'styles/globals.scss'
 import 'styles/modules.scss'
 import 'styles/layout.scss'
+import 'styles/typography.scss'
 
 
 // This example make job!
@@ -34,9 +34,9 @@ function App({ Component, pageProps }) {
       <Header>
         <Menu />
       </Header>
-      <Main>
+
         <Component {...pageProps} />
-      </Main>
+
       <Footer />
     </>
   )

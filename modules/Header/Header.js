@@ -1,7 +1,7 @@
 //import { useEffect } from 'react';
 // import { useHover } from 'utils/hooks';
 
-// import { cn } from 'utils/helpers';
+import { cn } from 'utils/helpers';
 // import { HomeButton } from './HomeButton';
 // import { MenuItem } from 'components/Menu';
 
@@ -35,7 +35,7 @@ const Header = ({
   // );
 
   const classes = {
-    //root: cn("Header", "Header-container", isHover.homeButton && !global && "hovered"),
+    root: cn(styles.module, 'Header-module'), // ToDo -> context and possible classes: isHover.homeButton && !global && "hovered", "Header", "Header-container"
     navigationModule: 'Header--navigation-module',
   }
 
@@ -72,7 +72,7 @@ const Header = ({
   }
   
   return(
-    <header className={styles.module} >
+    <header className={classes.root} >
       <HeaderItem>
         <HomeButton />
       </HeaderItem>
