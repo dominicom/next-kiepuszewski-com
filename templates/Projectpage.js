@@ -4,7 +4,7 @@ import { Main } from 'modules'
 
 
 
-export const Defaultpage = props => {
+export const Projectpage = props => {
   const { children, hero, theme } = props
 
   const mainProps = { 
@@ -16,12 +16,10 @@ export const Defaultpage = props => {
     <Main {...mainProps}>
       <Head>
         <title>title from database</title>
-        <meta name="description" content="tu jakis opis" />
+        <meta name="description" content="Projekt | tu jakis opis" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       {children}
     </Main>
   )
 }
-

@@ -10,10 +10,11 @@ import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 
 
+
 import { getFilePaths } from 'utils/mdxUtils'
 
 import { Grid } from 'layout/Grid';
-import { Defaultpage } from 'templates/Defaultpage'
+import { Projectpage } from 'templates/Projectpage'
 
 
 
@@ -22,18 +23,23 @@ import { Defaultpage } from 'templates/Defaultpage'
 
 
 export default function Work({ meta, source }) {
-  console.log(source, meta)
+  //console.log(source, meta)
+
+
+
+
   return (
-    <Defaultpage meta={meta}>
+    <Projectpage meta={meta}>
       <Grid>
         <MDXRemote {...source} />
       </Grid>
-    </Defaultpage>
+    </Projectpage>
   )
 }
+// Two levels nested routing in nextjs
+// https://stackoverflow.com/questions/57648690/2-levels-nested-routing-in-nextjs
 
-
-const myPath = 'pages/work'
+const myPath = 'contents/work'
 
 export const getStaticProps = async ({ params }) => {
   // const postFilePath = path.join(POSTS_PATH, `${params.slug}.mdx`)
@@ -60,6 +66,7 @@ export const getStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths = async () => {
+
   const paths = getFilePaths(myPath)
     // Remove file extensions for page paths
     .map((path) => path.replace(/\.mdx?$/, ''))

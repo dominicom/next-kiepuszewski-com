@@ -8,6 +8,7 @@ import {
 } from 'modules';
 
 import { Grid, Row } from 'layout/Grid';
+import Image from 'next/image'
 
 import 'styles/globals.scss'
 import 'styles/modules.scss'
@@ -15,7 +16,7 @@ import 'styles/layout.scss'
 import 'styles/typography.scss'
 
 
-const components = { Menu, Grid, Row }
+const components = { Menu, Grid, Row, Image }
 
 // This example make job!
 // https://github.com/vercel/next.js/tree/canary/examples/blog-starter

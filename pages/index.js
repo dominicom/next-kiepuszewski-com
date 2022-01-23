@@ -17,6 +17,8 @@ export default function Home() {
 
 
       <Intro />
+
+      
       <Grid>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>

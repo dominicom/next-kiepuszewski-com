@@ -16,7 +16,7 @@ const leadText = [
   "Just myself!"
 ]
 
-export default () => {
+export default function Intro() {
 
   const classes = {
     root: cn(styles.section, 'dtm-Hero', 'themed-background'),
@@ -34,7 +34,7 @@ export default () => {
           <div className={classes.heading}>
             <h1>Hello,</h1>
             <h2 className="leadText-changer">
-              I'm
+              {`I'm`}
               {leadText.map((text, i) => <span key={i}>{text}</span>)}
             </h2>
           </div>
