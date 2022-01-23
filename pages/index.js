@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 import { Grid } from 'layout'
 import { Defaultpage } from 'templates/Defaultpage'
@@ -18,49 +19,38 @@ export default function Home() {
 
       <Intro />
 
-      
+
       <Grid>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome, Welcome!
         </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <h2>Everybody is welcome!</h2>
       </Grid>
 
 
 
       <Grid>
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <Link href="/work">
+            <a className={styles.card}>
+              <h2>See what i'm doing &rarr;</h2>
+              <p>Find in-depth information about my work.</p>
+            </a>
+          </Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <Link href="/about">
+            <a className={styles.card}>
+              <h2>About me &rarr;</h2>
+              <p>Learn more about me, get unique information!</p>
+            </a>
+          </Link>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <Link href="/contact">
+            <a className={styles.card}>
+              <h2>Get in touch &rarr;</h2>
+              <p>Professional in IT Industry, what to design something? So what are you waiting for?</p>
+            </a>
+          </Link>
         </div>
       </Grid>
       

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Main } from 'modules'
+import { Grid } from 'layout'
 
 
 
@@ -19,7 +20,9 @@ export const Projectpage = props => {
         <meta name="description" content="Projekt | tu jakis opis" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {children}
+      <Grid>
+        {children}
+      </Grid>
     </Main>
   )
 }

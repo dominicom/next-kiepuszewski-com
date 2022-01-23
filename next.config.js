@@ -3,14 +3,13 @@ module.exports = {
 }
 
 
-// NOTE: When this code is active it override [slug] files
+// NOTE: deactive this config when project will handle dynamic nested routing
 
 
-/*
+
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
 })
 module.exports = withMDX({
   pageExtensions: ['js', 'jsx', 'mdx'],
 })
-*/

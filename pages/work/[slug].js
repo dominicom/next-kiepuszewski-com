@@ -30,9 +30,7 @@ export default function Work({ meta, source }) {
 
   return (
     <Projectpage meta={meta}>
-      <Grid>
-        <MDXRemote {...source} />
-      </Grid>
+      <MDXRemote {...source} />
     </Projectpage>
   )
 }
