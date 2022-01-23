@@ -3,6 +3,7 @@ import { MDXRemote } from 'next-mdx-remote'
 import fs from 'fs'
 import path from 'path'
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 import { Grid } from 'layout'
 import { Defaultpage } from 'templates/Defaultpage'
@@ -20,7 +21,7 @@ export default function Contact({ source }) {
       </Head>
       <Grid>
         <h1 className={styles.title}>
-          Welcome to <a href="/contact">Contact Page!</a>
+          Welcome to <Link href="/contact">Contact Page!</Link>
         </h1>
       </Grid>
       <Grid>
