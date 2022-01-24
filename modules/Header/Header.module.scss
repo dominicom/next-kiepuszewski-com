@@ -1,7 +1,7 @@
 @import 'styles/variables.scss';
 
 .module {
-  padding: $space-16;
+  padding: $space-16 $space-16 0;
   @media screen and (max-width: $layout-xs) {
     padding: $space-12;
   }

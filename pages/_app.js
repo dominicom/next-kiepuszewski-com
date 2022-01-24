@@ -7,7 +7,10 @@ import {
   Footer 
 } from 'modules';
 
-import { Grid, Row } from 'layout/Grid';
+import Container from 'containers/Container'
+
+import { Grid, Row, Column } from 'layout/Grid'
+import { Card, Tile } from 'components'
 import Image from 'next/image'
 
 import 'styles/globals.scss'
@@ -16,7 +19,7 @@ import 'styles/layout.scss'
 import 'styles/typography.scss'
 
 
-const components = { Menu, Grid, Row, Image }
+const components = { Menu, Card, Tile, Grid, Row, Column, Image, Container }
 
 // This example make job!
 // https://github.com/vercel/next.js/tree/canary/examples/blog-starter
