@@ -16,7 +16,7 @@
 .Tile {
   position: relative;
   transition: background-color 150ms ease;
-  &[class*="aspect--ratio"] {
+  &[class*="aspect-ratio"] {
     padding-bottom: 50%;
     min-width: 10rem;
     .Tile-container {

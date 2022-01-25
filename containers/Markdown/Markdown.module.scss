@@ -3,6 +3,8 @@
 }
 
 .paragraph {
-  margin: 0 1rem;
-  width: 67%;
+  padding: 0 1rem;
+  // width: 67%;
+  flex: 0 0 calc(100% / 12 * 8);
+  max-width: calc(100% / 12 * 8);
 }

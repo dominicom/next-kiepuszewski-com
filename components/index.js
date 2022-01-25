@@ -1,4 +1,4 @@
-import { Card, ArticleCard } from './Card'
+import { Card, ImageCard } from './Card'
 import Tile from './Tile'
 
-export { Card, ArticleCard, Tile }
+export { Card, ImageCard, Tile }

@@ -4,11 +4,11 @@ import Tile from 'components/Tile';
 
 import { cn } from 'utils/helpers';
 
-import styles from './ArticleCard.module.scss'
+import styles from './ImageCard.module.scss'
 
 
 
-export default function ArticleCard(props) {
+export default function ImageCard(props) {
 
   const { children, dark, ratio, nospacing, minicard } = props;
 
@@ -23,15 +23,14 @@ export default function ArticleCard(props) {
     gutterRight: props.gutterRight
   }
   const tileProps = {
-    // ratio: props.ratio,
     dark: props.dark,
   }
 
   
-  const aspectRatio = cn(`aspect--ratio`, ratio !== true ? `aspect--ratio--${ratio}` : 'aspect--ratio--1x1')
+  const aspectRatio = cn(`aspect-ratio`, ratio !== true ? `aspect-ratio--${ratio}` : 'aspect-ratio--1x1')
 
   const classes = {
-    card: cn('article','Card', dark && 'dark', minicard && 'minicard-style'),
+    card: cn('ImageCard','Card', dark && 'dark', minicard && 'minicard-style'),
     aspect: cn(ratio && aspectRatio, !nospacing && 'card--spacing'), // !nospacing && 'card--spacing'
     container: cn('Card-container', ratio && 'aspect-ratio--object') // 'Card-container',   
   }
@@ -61,7 +60,7 @@ export default function ArticleCard(props) {
   }
 }
 
-ArticleCard.defaultProps = {
+ImageCard.defaultProps = {
   ratio: true,
   noGutter: true,
   //gutter: false

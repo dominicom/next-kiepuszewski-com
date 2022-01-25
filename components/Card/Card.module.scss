@@ -15,7 +15,7 @@
 .Card {
   position: relative;
   transition: background-color 150ms ease;
-  &[class*="aspect--ratio"] {
+  &[class*="aspect-ratio"] {
     padding-bottom: 100%;
     min-width: 10rem;
     .Card-container {

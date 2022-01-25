@@ -1,4 +1,4 @@
 import Card from './Card';
-import ArticleCard from './ArticleCard';
+import ImageCard from './ImageCard';
 
-export { Card, ArticleCard };
+export { Card, ImageCard };

@@ -21,12 +21,20 @@ export default function Card(props) {
     gutterRight: props.gutterRight
   }
   const tileProps = {
-    // ratio: props.ratio,
     dark: props.dark,
   }
 
+  const cardClasses = cn(
+    'Card', 
+    dark && 'dark', 
+    minicard && 'minicard-style'
+  )
+
   
-  const aspectRatio = cn(`aspect--ratio`, ratio !== true ? `aspect--ratio--${ratio}` : 'aspect--ratio--1x1')
+  const aspectRatio = cn(
+    `aspect-ratio`, 
+    ratio !== true ? `aspect-ratio--${ratio}` : 'aspect-ratio--1x1'
+  )
 
   const classes = {
     card: cn('Card', dark && 'dark', minicard && 'minicard-style'),

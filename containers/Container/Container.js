@@ -1,13 +1,14 @@
 import { cn } from 'utils/helpers'
+import { Row } from 'layout'
 
-const defaultTheme = "g10"
+const defaultTheme = ""
 
 export default function Container(props) {
   const { children, hero, theme } = props
-  const classes = cn('container', theme && theme || defaultTheme)
+  const classes = cn('Block-container', 'container', theme && theme || defaultTheme)
   return(
-    <div className={classes}>
+    <Row className={classes}>
       {children}
-    </div>
+    </Row>
   )
 }

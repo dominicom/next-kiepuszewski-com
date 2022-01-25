@@ -1,15 +1,31 @@
 @import 'styles/variables.scss';
+@import 'styles/custom-media.scss';
 
 .grid {
-  padding: { left: calc($spacer-3xl - $space-02); right: $spacer-m; top: $spacer-m; bottom: $spacer-m };
-  @media screen and (max-width: $layout-sm) {
+  padding: { left: calc($spacer-3xl - $space-02 + 15%); right: calc($spacer-m + 19rem); top: $spacer-m; bottom: $spacer-m };
+
+  @media screen and (max-width: $breakpoint-xlarge) {
+    // padding: { left: calc($spacer-3xl - $space-02); right: calc($spacer-m + 19rem); top: $spacer-m; bottom: $spacer-m };
+    padding: { left: calc($spacer-3xl - $space-02); right: calc($spacer-m + 19rem); top: $spacer-m; bottom: $spacer-m };
+  }
+
+  @media screen and (max-width: $breakpoint-large) {
+    padding: { left: calc($spacer-3xl - $space-02); right: $spacer-m; top: $spacer-m; bottom: $spacer-m };
+  }
+
+  @media screen and (max-width: $breakpoint-medium) {
     padding-left: $spacer-m;
   }
+
+
+
+  
 }
 
 
 .row {
   display: flex;
   margin: 0 -1rem;
+  // background-color: magenta;
   // padding: { left: $spacer-3xl; right: $spacer-m; top: $spacer-m; bottom: $spacer-m };
 }
