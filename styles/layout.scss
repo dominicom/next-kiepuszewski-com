@@ -43,7 +43,7 @@
 
 
 [class*="column"] {
-  // display: block;
+  display: block;
   // & > *:not(:first-child) {
   //   background-color: magenta;
   //   height: 10%;
@@ -66,6 +66,8 @@
   &.col-4 {
     flex: 0 0 calc(100% / 3);
     max-width: calc(100% / 3);
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
   }
   &.col-5 {
     flex: 0 0 calc(100% / 12 * 5);
@@ -82,8 +84,8 @@
   &.col-8 {
     flex: 0 0 calc(100% / 12 * 8);
     max-width: calc(100% / 12 * 8);
-    // flex: 0 0 66.66667%;
-    // max-width: 66.66667%;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
   }
   &.col-9 {
     flex: 0 0 75%;
@@ -432,11 +434,24 @@
   Card styles
 */
 
+$card-gutter: $space-02;
 
+// TODO - better solution for margins, now using calc
 .card--spacing {
-  margin-right: $space-02;
-  margin-bottom: $space-02;
-  // margin: $space-01;
+  // margin-right: $space-02;
+  // margin-bottom: $space-02;
+  // padding: $space-01;
+
+  // background-color: aqua;
+
+  .Card-container {
+    height: calc(100% - $card-gutter);
+    width: calc(100% - $card-gutter);
+    &:not(.aspect-ratio--object) {
+      padding-bottom: $card-gutter;
+    }
+  }
+
 }
 
 

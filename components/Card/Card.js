@@ -26,19 +26,22 @@ export default function Card(props) {
   }
 
   
-  const aspectRatio = cn(`aspect--ratio`, ratio !== true ? `aspect--ratio--${ratio}` : '')
+  const aspectRatio = cn(`aspect--ratio`, ratio !== true ? `aspect--ratio--${ratio}` : 'aspect--ratio--1x1')
 
   const classes = {
-    card: cn('Card', dark && 'dark', ratio && aspectRatio, !nospacing && 'card--spacing', minicard && 'minicard-style'),
-    container: cn('Card-container', ratio && 'aspect-ratio--object')
+    card: cn('Card', dark && 'dark', minicard && 'minicard-style'),
+    aspect: cn(ratio && aspectRatio, !nospacing && 'card--spacing'), // !nospacing && 'card--spacing'
+    container: cn('Card-container', ratio && 'aspect-ratio--object') // 'Card-container',   
   }
 
   const Element = 
     <div className={classes.card}>
-      <div className={classes.container}>
-          <Tile {...tileProps} >
-            {children}
-          </Tile>
+      <div className={classes.aspect}>
+        <div className={classes.container}>
+            <Tile {...tileProps} >
+              {children}
+            </Tile>
+        </div>
       </div>
     </div>
 
