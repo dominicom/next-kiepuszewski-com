@@ -8,10 +8,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 #### Selected projects
 
 <Row>
-  <Card colMd={8} colLg={8} col={6} light />
-  <Card col dark />
-  <Card colMd={8} colLg={8} col dark />
-  <Card col dark />
+  <ArticleCard colMd={8} colLg={8} col={6} light />
+  <ArticleCard col dark />
+  <ArticleCard colMd={8} colLg={8} col dark />
+  <ArticleCard col dark />
 </Row>
 </Section>
 
@@ -19,15 +19,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <Section>
 <Row>
-  <Column col={6} colMd={4} colLg={8} noGutter>
-    <Card />
+  <Column col={3} colMd={4} colLg={8} noGutter>
+    <ArticleCard ratio='1x1' dark />
   </Column>
   <Column col={3} colMd={2} colLg={4} noGutter>
-    <Card dark />
+    <ArticleCard dark />
+    <Card ratio="2x1" dark />
     <Card ratio="2x1" dark />
   </Column>
-  <Card col={4} colSm={2} colMd={4} colLg={4} dark />
-  <Card col={2} colMd={2} colLg={4} dark />
+  <ArticleCard col={4} colSm={2} colMd={4} colLg={4} dark />
+  <ArticleCard col={2} colMd={2} colLg={4} dark />
+  <ArticleCard col={2} colMd={2} colLg={4} dark />
 </Row>
 </Section>
 

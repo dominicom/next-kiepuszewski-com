@@ -1,10 +1,11 @@
 @import 'styles/variables.scss';
+@import 'styles/custom-media.scss';
 
 .module {
   padding: $space-16 $space-16 0;
-  @media screen and (max-width: $layout-xs) {
-    padding: $space-12;
-  }
+  // @media screen and (max-width: $layout-xs) {
+  //   padding: $space-12;
+  // }
   color: $gray-60;
   // padding: 1rem 1rem 0 1rem;
   //background: blue;

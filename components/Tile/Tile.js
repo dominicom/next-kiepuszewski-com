@@ -19,7 +19,7 @@ export default function Tile(props) {
 
 
   const classes = {
-    tile: cn('Tile', dark && 'dark', ratio && 'aspect--ratio'),
+    tile: cn('Tile', dark && 'dark' ), // ratio && 'aspect--ratio'
     container: 'Tile-container'
   }
 
