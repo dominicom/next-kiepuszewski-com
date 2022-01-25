@@ -12,10 +12,12 @@ import styles from './Layout.module.scss';
 
 
 export default function Column(props) {
+  
+  // TODO
   // Styles
-  // TO-DO
   // no-gutters/gutters, no-gutters/gutters on left/right for Lg Md breaks!
   // Consider Sm
+
   const {
       id, 
       children, 
@@ -31,9 +33,11 @@ export default function Column(props) {
       gutterRight 
   } = props;
   
+  /*
+      This calculate numbers columns global (col) and at breakpoints (colLg and so far)  
+  */
 
-  
-  const colNum = grid.renderColumns(col) || 3;
+  const colNum = grid.renderColumns(col);
   const colLgNum = grid.renderLargeColumns(colLg);
   const colMdNum = grid.renderMediumColumns(colMd);
   const colSmNum = grid.renderMediumColumns(colSm);
@@ -61,9 +65,9 @@ export default function Column(props) {
       // colMdNum ? `col-md-${colMd}` : `col-md-${colMd || 4}`,
       // colSmNum ? `col-sm-${colSm}` : `col-sm-${colSm || 4}`, 
 
-      colLgNum ? `col-lg-${colLgNum}` : `col-lg-${colLg || 4}`,
-      colMdNum ? `col-md-${colMdNum}` : `col-md-${colMd || 4}`,
-      colSmNum ? `col-sm-${colSmNum}` : `col-sm-${colSm || 4}`, 
+      colLgNum && `col-lg-${colLgNum}`,
+      colMdNum && `col-md-${colMdNum}`,
+      colSmNum && `col-sm-${colSmNum}`, 
 
       !empty && !noGutter && 'gutter',
 
