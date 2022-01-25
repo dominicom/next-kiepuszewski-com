@@ -5,7 +5,14 @@ import { Grid } from 'layout'
 import { Defaultpage } from 'templates/Defaultpage'
 import styles from '../styles/Home.module.css'
 
-export default function About() {
+
+import dynamic from 'next/dynamic'
+import Markdown from 'containers/Markdown'
+
+
+export default function Work() {
+  const Content = dynamic(() => import('contents/work.mdx'))
+  
   return (
     <Defaultpage theme="g90">
       <Head>
@@ -49,6 +56,12 @@ export default function About() {
           </Link>
         </div>
       </Grid>
+
+      <Markdown theme="g100">
+        <Content />
+      </Markdown>
+
+
     </Defaultpage>
   )
 }

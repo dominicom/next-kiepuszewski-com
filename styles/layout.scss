@@ -14,6 +14,10 @@
   }
 }
 
+.dtm--row {
+  flex-wrap: wrap;
+}
+
 .container {
   &[class*="g10"] {
     color: $gray-100;
@@ -32,9 +36,15 @@
     background-color: $gray-100;
   }
 }
-[class*="column"] {
 
-  // Columns
+/*
+  Column styles
+*/
+
+
+[class*="column"] {
+  background-color: magenta;
+
   &.col-1 {
     flex: 0 0 calc(100% / 12);
     max-width: calc(100% / 12);
@@ -233,6 +243,12 @@
   transition: opacity 200ms;
 }
 
+/*
+
+  Tile
+
+*/
+
 .gutter {
   .Tile {
     margin: 0 0 2rem 0;
@@ -243,7 +259,6 @@
     margin: 0 0 1rem 0;
   }
 }
-
 
 .Tile {
   position: relative;

@@ -33,14 +33,14 @@ export default function Column(props) {
   
 
   
-  const colNum = grid.renderColumns(col);
+  const colNum = grid.renderColumns(col) || 3;
   const colLgNum = grid.renderLargeColumns(colLg);
   const colMdNum = grid.renderMediumColumns(colMd);
   const colSmNum = grid.renderMediumColumns(colSm);
 
   if (id) {
-    console.log(`cfelu cholerny ${id}`, col, colSm, colMd, colLg);
-    console.log(`cfelu cholerny ${id} numbsy`, colNum, colSmNum, colMdNum, colLgNum);
+    console.log(`id check ${id}`, col, colSm, colMd, colLg);
+    console.log(`id check ${id} numbsy`, colNum, colSmNum, colMdNum, colLgNum);
   }
 
 
@@ -51,7 +51,7 @@ export default function Column(props) {
       flex && 'dtm--row',
       styles.column, 
       empty && 'column__empty', 
-      colNum ? `col-${colNum}` : 'col-3', 
+      colNum && `col-${colNum}`,
 
       // colLgNum ? `col-lg-${colLgNum}` : `col-lg-4`,
       // colMdNum ? `col-md-${colMdNum}` : `col-md-4`,
