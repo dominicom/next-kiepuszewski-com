@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+//import Icon from 'components/Icon'
 import Image from 'next/image'
 import { Grid } from 'layout'
 import { Defaultpage } from 'templates/Defaultpage'
@@ -31,6 +32,7 @@ export default function Work() {
           Get started by editing{' '}
           <code className={styles.code}>pages/work.js</code>
         </p>
+        {/* <Icon /> */}
       </Grid>
       <Grid>
         <div className={styles.grid}>

@@ -13,6 +13,15 @@ const RowParapraph = ({ children }) => (<Row><p className={styles.paragraph}>{ch
 
 const components = { 
   p: RowParapraph
+  // p: (p) => {
+  //   const { node } = p;
+  //   if (node.children[0].type === "image") {
+  //     const image = node.children[0];
+  //     return <Image src={image.url} alt={image.alt} height="200" width="355" />;
+  //   }
+
+  //   return <p>{paragraph.children}</p>;
+  // }
 }
 
 export default function Markdown({ children, theme }) {
