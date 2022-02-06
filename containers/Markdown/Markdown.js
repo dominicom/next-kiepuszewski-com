@@ -1,4 +1,4 @@
-// import type {Node} from 'react';
+import PropTypes from 'prop-types';
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
@@ -44,6 +44,9 @@ export default function Markdown({ children, theme, filename }) {
   )
 }
 
+Markdown.propTypes = {
+  filename: PropTypes.string.isRequired,
+}
 
 
 
