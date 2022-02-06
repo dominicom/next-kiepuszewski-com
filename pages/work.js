@@ -59,9 +59,7 @@ export default function Work() {
         </div>
       </Grid>
 
-      <Markdown theme="g100">
-        <Content />
-      </Markdown>
+      <Markdown theme="g100" filename='work.mdx' />
 
 
     </Defaultpage>

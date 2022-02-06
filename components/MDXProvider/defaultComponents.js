@@ -20,7 +20,7 @@ import {
 
 import Image from 'next/image'
 
-
+const RowParapraph = ({ children }) => (<Row><p className={styles.paragraph}>{children}</p></Row>)
 
 const components = { 
   Menu, 
@@ -31,7 +31,7 @@ const components = {
   Row, 
   Column, 
   Image, 
-  Container 
+  Container,
 }
 
 export default components;
