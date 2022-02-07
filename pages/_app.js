@@ -1,4 +1,5 @@
-import { MDXProvider } from '@mdx-js/react'
+// import { MDXProvider } from '@mdx-js/react'
+import { MDXProvider } from 'components/MDXProvider'
 
 import { 
   Header, 
