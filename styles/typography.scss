@@ -1,5 +1,15 @@
 @import 'styles/variables.scss';
 
+// h1, h2, h3, h4, h5, h6 {
+//   font-family: $font-stack-grotesk-05;
+//   text-transform: uppercase;
+// }
+h1 {
+  font-family: $font-stack-grotesk-05;
+  text-transform: uppercase;
+}
+
+
 //styleName: productive/heading-07;
 h1 {
   // font-family: Inter;
