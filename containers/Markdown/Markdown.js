@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import Image from 'next/image'
+import Image from 'components/Image'
 import { MDXProvider } from '@mdx-js/react'
-// import { compile } from '@mdx-js/mdx'
-// import remarkUnwrapImages from 'remark-unwrap-images'
 import { Grid, Row } from 'layout'
 import { Defaultpage } from 'templates/Defaultpage'
 
@@ -22,7 +20,9 @@ const components = {
       // setTimeout(()=> { console.log(paragraph)}, 100)
       const props = paragraph.children.props
       if (props && props.originalType === 'img') {
-        return <img src={paragraph.children.props.src} />
+        // return <div><img src={props.src} alt={props.alt} /></div>
+        return <Image overlaySrc={`${props.src}?auto=compress&cs=tinysrgb&dpr=2&w=5`} src={`${props.src}?auto=compress&cs=tinysrgb&dpr=2&w=5000`} alt={props.alt} />
+        // return <div><Image src={props.src} alt={props.alt} layout='responsive' width={1000} height={750} /></div>
       }
       return RowParapraph
     }

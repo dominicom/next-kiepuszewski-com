@@ -15,10 +15,11 @@ import Container from 'containers/Container'
 import { 
   Card, 
   ImageCard, 
-  Tile 
+  Tile,
+  Image 
 } from 'components'
 
-import Image from 'next/image'
+// import Image from 'next/image'
 
 const RowParapraph = ({ children }) => (<Row><p className={styles.paragraph}>{children}</p></Row>)
 

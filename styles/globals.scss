@@ -1,5 +1,8 @@
 @import 'styles/variables.scss';
 
+// globals load from components paths
+// https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/styles/internal
+
 * {
   box-sizing: border-box;
 }

@@ -5,6 +5,11 @@ module.exports = {
   reactStrictMode: true,
 }
 
+module.exports = {
+  images: {
+    domains: ['cdn.pixabay.com'],
+  },
+}
 
 // NOTE: deactive this config when project will handle dynamic nested routing
 
