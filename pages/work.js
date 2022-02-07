@@ -1,7 +1,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
-//import Icon from 'components/Icon'
-import Image from 'next/image'
+// import Icon from 'components/Icon'
+import { 
+  Button, 
+  IconButton,
+} from 'components/Button'
+
 import { Grid } from 'layout'
 import { Defaultpage } from 'templates/Defaultpage'
 import styles from '../styles/Home.module.css'
@@ -12,8 +16,7 @@ import Markdown from 'containers/Markdown'
 
 
 export default function Work() {
-  const Content = dynamic(() => import('contents/work.mdx'))
-  
+
   return (
     <Defaultpage theme="g90">
       <Head>
@@ -32,7 +35,8 @@ export default function Work() {
           Get started by editing{' '}
           <code className={styles.code}>pages/work.js</code>
         </p>
-        {/* <Icon /> */}
+        {/* <Icon />
+        <Button primary renderIcon="Air">Click me!</Button> */}
       </Grid>
       <Grid>
         <div className={styles.grid}>

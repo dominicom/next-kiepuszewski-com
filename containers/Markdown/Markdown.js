@@ -24,7 +24,7 @@ const components = {
         return <Image overlaySrc={`${props.src}?auto=compress&cs=tinysrgb&dpr=2&w=5`} src={`${props.src}?auto=compress&cs=tinysrgb&dpr=2&w=5000`} alt={props.alt} />
         // return <div><Image src={props.src} alt={props.alt} layout='responsive' width={1000} height={750} /></div>
       }
-      return RowParapraph
+      return <RowParapraph>{paragraph.children}</RowParapraph>
     }
 }
 

@@ -13,7 +13,7 @@ const omit = (obj, omitKey) =>
 
 const overlayStyles = {
   position: 'absolute',
-  filter: 'blur(80px)',
+  filter: 'blur(128px)',
   transition: 'opacity ease-in 1000ms',
   clipPath: 'inset(0)'
 };

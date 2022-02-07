@@ -1,0 +1,10 @@
+@import 'styles/variables.scss';
+@import 'styles/custom-media.scss';
+
+/*
+  Global styles for components
+*/
+@import 'components/Button/button.scss';
+@import 'components/Card/card.scss';
+// @import 'components/Menu/menu.scss';
+@import 'components/Tile/tile.scss';

@@ -15,6 +15,7 @@ import { Card, ImageCard, Tile } from 'components'
 import Image from 'next/image'
 
 import 'styles/globals.scss'
+import 'styles/components.scss'
 import 'styles/modules.scss'
 import 'styles/layout.scss'
 import 'styles/typography.scss'

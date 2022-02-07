@@ -1,0 +1,61 @@
+.dtm-Menu {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  .menu-link:last-child {
+    margin-right: 0;
+  }
+}
+
+.desktop-mode .dtm-Menu {
+  flex-direction: column;
+}
+
+.MenuItem {
+  color: $gray-60;
+  transition: 300ms;
+
+  .MenuItem-label {
+    fill: currentColor;
+  }
+
+  &:hover {
+    .MenuItem-label {
+      fill: $gray-100; //$black;
+    }
+  }
+  &.inverted:hover {
+    background: $gray-60; 
+    .MenuItem-label {
+      fill: $gray-10; //$black;
+    }
+  }
+}
+
+.menu-link {
+  svg {
+    height: 100%;
+  }
+  &.contact {
+    width: 7rem;
+  }
+  rect, g {
+    transition: 300ms;
+  }
+  rect {
+    fill: currentColor;
+  }
+  &:hover rect {
+    fill: $primary;
+  }
+  &.selected rect {
+    fill: $primary;
+    x: 0;
+    width: 100%;
+  }
+  &.inverted:hover rect {
+    fill: $primary-02;
+  }
+}

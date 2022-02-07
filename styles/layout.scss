@@ -1,6 +1,9 @@
 @import 'styles/variables.scss';
 @import 'styles/custom-media.scss';
 
+@import 'layout/Grid/column.scss';
+@import 'layout/Grid/row.scss';
+
 
 .Main-container {
   // justify-content: center;
@@ -18,9 +21,6 @@
   margin-bottom: 2rem;
 }
 
-.dtm--row {
-  flex-wrap: wrap;
-}
 
 .container {
   
@@ -241,35 +241,6 @@
 }
 
 
-// Gutters
-.gutter {
-  .Card {
-    margin: 0 0 2rem 0;
-  }
-}
-[class*="gutter__"] {
-  .Card {
-    margin: 0 0 1rem 0;
-  }
-}
-
-.gutter {
-  .Tile {
-    margin: 0 0 2rem 0;
-  }
-}
-[class*="gutter__"] {
-  .Tile {
-    margin: 0 0 1rem 0;
-  }
-}
-
-
-// .dtm--grid {
-
-// }
-
-
 /*
   Aspect Ratio containers
 */
@@ -317,291 +288,10 @@
   width: 100%;
 }
 
-/*
-
-  Tile
-
-*/
 
 
 
-.Tile {
-  position: relative;
-  transition: background-color 150ms ease;
-  width: 100%;
-  height: 100%;
-
-  // TODO: move this code into aspect ratio object
-  // &[class*="aspect-ratio"] {
-  //   // padding-bottom: 100%;
-  //   min-width: 10rem;
-  //   .Tile-container {
-  //     position: absolute;
-  //   }
-  // }
-  .Tile-container {
-    padding: 1rem;
-  }
-  // margin-right: 0.125rem;
-  // margin-bottom: 0.125rem;
-  color: $gray-100;
-  background-color: $gray-10;
-  &:hover {
-    background-color: $gray-20;
-  }
-  &:last-child {
-    flex-grow: 1;
-  }
-  .Tile-subtitle {
-    font-size: 0.75em;
-    font-weight: 800;
-    margin-bottom: 0.75em;
-  }
-  .Tile-title {
-    font-size: 1em;
-    font-weight: 600;
-    margin-bottom: 1em;
-  }
-  .Tile-subtitle, .Tile-title {
-    margin-top: 0;
-  }
-}
-
-.Tile.dark {
-  background-color: $gray-90;
-  &:hover {
-    background-color: $gray-80;
-  }
-  color: $white;
-}
-
-[class*="white"],
-[class*="g00"] {
-  .Tile {
-    position: relative;
-    background-color: $gray-10 !important;
-    &:hover {
-      background-color: $gray-20 !important;
-    }
-  }
-}
-
-[class*="g10"] {
-  .Tile {
-    position: relative;
-    background-color: $white;
-    &:hover {
-      background-color: $gray-20;
-    }
-  }
-}
-[class*="g20"] {
-  .Tile {
-    position: relative;
-    background-color: $white;
-    &:hover {
-      background-color: $gray-10;
-    }
-  }
-}
-[class*="white"],
-[class*="g10"],
-[class*="g20"] {
-  .Tile.dark {
-    background-color: $gray-80 !important;
-    &:hover {
-      background-color: $gray-70 !important;
-    }
-    color: $white;
-  }
-}
-
-[class*="g90"] {
-  .Tile.dark {
-    background-color: $gray-80;
-    &:hover {
-      background-color: $gray-70;
-    }
-    color: $white;
-  }
-}
-
-[class*="g100"] {
-  .Tile.dark {
-    background-color: $gray-90;
-    &:hover {
-      background-color: $gray-80;
-    }
-    color: $white;
-  }
-}
 
 
 
-/*
-  Card styles
-*/
 
-$card-gutter: $space-02;
-
-// TODO - better solution for margins, now using calc
-.card--spacing {
-  // margin-right: $space-02;
-  // margin-bottom: $space-02;
-  // padding: $space-01;
-
-  // background-color: aqua;
-
-  .Card-container {
-    height: calc(100% - $card-gutter);
-    width: calc(100% - $card-gutter);
-    &:not(.aspect-ratio--object) {
-      padding-bottom: $card-gutter;
-    }
-  }
-
-}
-
-
-.Card {
-  position: relative;
-  transition: background-color 150ms ease;
-
-
-  // &.aspect-ratio--flex.aspect-ratio {
-  //   height: 100%;
-  // }
-
-  // margin-right: $space-02;
-  // margin-bottom: $space-02;
-
-  &.minicard-style {
-    .Card-container {
-      min-height: 3rem;
-    }
-  }
-  .Card-container {
-    min-height: 4rem;
-    display: flex;
-    flex-direction: column;
-    .Tile {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  // TODO: remove when small gutters will be fixed!
-  &.card--spacing {
-    // margin-right: 1px;
-    // margin-bottom: 1px;
-    // margin: 1px;
-    // margin: 1px;
-    // padding-right: 1px;
-    // padding-bottom: 1px;
-
-
-    // .Card-container {
-    //   width: calc(100% - 1px);
-    //   height: calc(100% - 1px);
-    // }
-  }
-
-
-  // color: $gray-100;
-  // background-color: $gray-10;
-  // &:hover {
-  //   background-color: $gray-20;
-  // }
-
-  // TODO: remove this when Tile layout is fixed
-
-  &:last-child {
-    flex-grow: 1;
-  }
-  cursor: pointer;
-}
-
-// .Card.dark {
-//   background-color: $gray-90;
-//   &:hover {
-//     background-color: $gray-80;
-//   }
-//   color: $white;
-// }
-
-// [class*="white"],
-// [class*="g00"] {
-//   .Card {
-//     position: relative;
-//     background-color: $gray-10 !important;
-//     &:hover {
-//       background-color: $gray-20 !important;
-//     }
-//   }
-// }
-
-// [class*="g10"] {
-//   .Card {
-//     position: relative;
-//     background-color: $white;
-//     &:hover {
-//       background-color: $gray-20;
-//     }
-//   }
-// }
-// [class*="g20"] {
-//   .Card {
-//     position: relative;
-//     background-color: $white;
-//     &:hover {
-//       background-color: $gray-10;
-//     }
-//   }
-// }
-// [class*="white"],
-// [class*="g10"],
-// [class*="g20"] {
-//   .Card.dark {
-//     background-color: $gray-80 !important;
-//     &:hover {
-//       background-color: $gray-70 !important;
-//     }
-//     color: $white;
-//   }
-// }
-
-// [class*="g90"] {
-//   .Card.dark {
-//     background-color: $gray-80;
-//     &:hover {
-//       background-color: $gray-70;
-//     }
-//     color: $white;
-//   }
-// }
-
-// [class*="g100"] {
-//   .Card.dark {
-//     background-color: $gray-90;
-//     &:hover {
-//       background-color: $gray-80;
-//     }
-//     color: $white;
-//   }
-// }
-
-
-
-// .my-node-enter {
-//   opacity: 0;
-// }
-// .my-node-enter-active {
-//   opacity: 1;
-//   transition: opacity 200ms;
-// }
-// .my-node-exit {
-//   opacity: 1;
-// }
-// .my-node-exit-active {
-//   opacity: 0;
-//   transition: opacity 200ms;
-// }

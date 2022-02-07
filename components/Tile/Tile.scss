@@ -1,4 +1,7 @@
-@import 'styles/variables.scss';
+/*
+  Tile styles
+*/
+
 
 
 .gutter {
@@ -16,18 +19,22 @@
 .Tile {
   position: relative;
   transition: background-color 150ms ease;
-  &[class*="aspect-ratio"] {
-    padding-bottom: 50%;
-    min-width: 10rem;
-    .Tile-container {
-      position: absolute;
-    }
-  }
+  width: 100%;
+  height: 100%;
+
+  // TODO: move this code into aspect ratio object
+  // &[class*="aspect-ratio"] {
+  //   // padding-bottom: 100%;
+  //   min-width: 10rem;
+  //   .Tile-container {
+  //     position: absolute;
+  //   }
+  // }
   .Tile-container {
     padding: 1rem;
   }
-  margin-right: 0.125rem;
-  margin-bottom: 0.125rem;
+  // margin-right: 0.125rem;
+  // margin-bottom: 0.125rem;
   color: $gray-100;
   background-color: $gray-10;
   &:hover {

@@ -13,6 +13,11 @@ import {
 import Container from 'containers/Container'
 
 import { 
+  Button, 
+  IconButton,
+} from 'components/Button'
+
+import { 
   Card, 
   ImageCard, 
   Tile,
@@ -21,10 +26,12 @@ import {
 
 // import Image from 'next/image'
 
-const RowParapraph = ({ children }) => (<Row><p className={styles.paragraph}>{children}</p></Row>)
+// const RowParapraph = ({ children }) => (<Row><p className={styles.paragraph}>{children}</p></Row>)
 
 const components = { 
-  Menu, 
+  Menu,
+  Button, 
+  IconButton, 
   Card, 
   ImageCard, 
   Tile, 
