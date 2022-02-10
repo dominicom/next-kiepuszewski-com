@@ -10,18 +10,15 @@ import {
 
 import Container from 'containers/Container'
 
-import { Grid, Row, Column } from 'layout/Grid'
-import { Card, ImageCard, Tile } from 'components'
-import Image from 'next/image'
+// import { Grid, Row, Column } from 'layout/Grid'
+// import { Card, ImageCard, Tile } from 'components'
+// import Image from 'next/image'
 
 import 'styles/globals.scss'
 import 'styles/components.scss'
 import 'styles/modules.scss'
 import 'styles/layout.scss'
 import 'styles/typography.scss'
-
-
-const components = { Menu, Card, ImageCard, Tile, Grid, Row, Column, Image, Container }
 
 // This example make job!
 // https://github.com/vercel/next.js/tree/canary/examples/blog-starter
@@ -46,7 +43,7 @@ function App({ Component, pageProps }) {
         <Menu />
       </Header>
 
-      <MDXProvider components={components}>
+      <MDXProvider>
         <Component {...pageProps} />
       </MDXProvider>
 

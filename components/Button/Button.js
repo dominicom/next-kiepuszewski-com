@@ -55,7 +55,7 @@ export default function Button(props) {
 
 const RenderIconComponent = (icon) => {
   if (typeof icon === "string") {
-    return <Icon className="dtm--button__icon" name={icon} stroke={1.5} />;
+    return <Icon className="dtm--button__icon" size={16} name={icon} stroke={1.75} />;
   }
   if (typeof icon === "function") {
     return icon

@@ -17,11 +17,14 @@ import {
   IconButton,
 } from 'components/Button'
 
+import Icon from 'components/Icon'
+
 import { 
   Card, 
   ImageCard, 
   Tile,
-  Image 
+  Image, 
+ 
 } from 'components'
 
 // import Image from 'next/image'
@@ -38,8 +41,9 @@ const components = {
   Grid, 
   Row, 
   Column, 
-  Image, 
+  Image,
+  Icon, 
   Container,
 }
 
-export default components;
+export default components
