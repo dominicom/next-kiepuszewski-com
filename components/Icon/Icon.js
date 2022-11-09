@@ -10,7 +10,7 @@ const IconComponent = ({ type, settings }) => {
 export default function Icon({ name = 'Circle', className, size, stroke }) {
 
   const attributes = {
-    class: className || '',
+    className: className || '',
     strokeWidth: stroke || 2,
     color: "currentColor",
     size: size || 24

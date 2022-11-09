@@ -17,12 +17,13 @@ const components = {
   // p: RowParapraph,
   p: paragraph => {
       // ToDo @check if paragraph has children 
-      // setTimeout(()=> { console.log(paragraph)}, 100)
+      setTimeout(()=> { console.log(paragraph)}, 100)
       const props = paragraph.children.props
-      if (props && props.originalType === 'img') {
-        // return <div><img src={props.src} alt={props.alt} /></div>
+      if (props && props.originalType === 'img' && props.parentName === 'p') {
         return <Image overlaySrc={`${props.src}?auto=compress&cs=tinysrgb&dpr=2&w=5`} src={`${props.src}?auto=compress&cs=tinysrgb&dpr=2&w=5000`} alt={props.alt} />
-        // return <div><Image src={props.src} alt={props.alt} layout='responsive' width={1000} height={750} /></div>
+      }
+      if (props && props.originalType === 'a') {
+        return <a overlaySrc={`${props.src}?auto=compress&cs=tinysrgb&dpr=2&w=5`} src={`${props.src}?auto=compress&cs=tinysrgb&dpr=2&w=5000`} alt={props.alt} />
       }
       return <RowParapraph>{paragraph.children}</RowParapraph>
     }

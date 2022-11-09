@@ -12,6 +12,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: $font-stack;
+  // font-feature-settings: "zero" on,"ss04" on,"ss01" on,"ss02" on,"ss05" on,"ss03" on,"liga" off;
+
+  font-feature-settings: "ss04" 0;
   // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   //   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 1rem;
