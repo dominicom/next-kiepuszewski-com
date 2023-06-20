@@ -40,12 +40,14 @@ export default function Work() {
       </Grid>
       <Grid>
         <div className={styles.grid}>
+          {/* 
           <Link href="/work/docu">
             <a className={styles.card}>
               <h2>Docu &rarr;</h2>
               <p>Find in-depth information about Next.js features and API.</p>
             </a>
-          </Link>
+          </Link> 
+          */}
 
           <Link href="/work/zwei">
             <a className={styles.card}>

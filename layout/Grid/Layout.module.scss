@@ -2,11 +2,11 @@
 @import 'styles/custom-media.scss';
 
 .grid {
-  padding: { left: calc($spacer-3xl - $space-02 + 15%); right: calc($spacer-m + 19rem); top: $spacer-m; bottom: $spacer-m };
+  padding: { left: calc($spacer-3xl - $space-02 + 15%); right: calc($spacer-m + 18.975rem); top: $spacer-m; bottom: $spacer-m };
 
   @media screen and (max-width: $breakpoint-xlarge) {
     // padding: { left: calc($spacer-3xl - $space-02); right: calc($spacer-m + 19rem); top: $spacer-m; bottom: $spacer-m };
-    padding: { left: calc($spacer-3xl - $space-02); right: calc($spacer-m + 19rem); top: $spacer-m; bottom: $spacer-m };
+    padding: { left: calc($spacer-3xl - $space-02); right: calc($spacer-m + 18.975rem); top: $spacer-m; bottom: $spacer-m };
   }
 
   @media screen and (max-width: $breakpoint-large) {
