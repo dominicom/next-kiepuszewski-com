@@ -1,0 +1,10 @@
+@import 'styles/components.scss';
+@import 'styles/layout.scss';
+@import 'styles/modules.scss';
+@import 'styles/typography.scss';
+
+// Problem with SASS loader
+// https://stackoverflow.com/questions/66716218/error-compiling-nextjs-sass-global-stylesheets-when-deploying-to-vercel
+
+// globals load from components paths
+// https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/styles/internal

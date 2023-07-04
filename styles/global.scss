@@ -1,11 +1,5 @@
 @import 'styles/variables.scss';
-
-@import 'styles/components.scss';
-@import 'styles/layout.scss';
-@import 'styles/modules.scss';
-
-// globals load from components paths
-// https://github.com/carbon-design-system/gatsby-theme-carbon/tree/main/packages/gatsby-theme-carbon/src/styles/internal
+@import 'styles/custom-media.scss';
 
 * {
   box-sizing: border-box;

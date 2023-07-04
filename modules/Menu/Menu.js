@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 // eslint-disable-next-line
 // import { useHover } from 'utils/hooks';
 

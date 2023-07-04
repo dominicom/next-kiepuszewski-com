@@ -1,15 +1,18 @@
 // const remarkUnwrapImages = require('remark-unwrap-images')
+const path = require('path')
 
 
 module.exports = {
   reactStrictMode: true,
-}
-
-module.exports = {
   images: {
     domains: ['cdn.pixabay.com'],
   },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+    prependData: `@import "./styles/internal.scss";`,
+  },
 }
+
 
 // NOTE: deactive this config when project will handle dynamic nested routing
 
@@ -29,3 +32,4 @@ const withMDX = require('@next/mdx')({
 module.exports = withMDX({
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
 })
+

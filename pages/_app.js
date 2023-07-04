@@ -14,7 +14,9 @@ import Container from 'containers/Container'
 // import { Card, ImageCard, Tile } from 'components'
 // import Image from 'next/image'
 
-import 'styles/globals.scss'
+import 'styles/global.scss'
+import 'styles/internal.scss'
+
 // Problem with SASS loader
 // https://stackoverflow.com/questions/66716218/error-compiling-nextjs-sass-global-stylesheets-when-deploying-to-vercel
 // import 'styles/components.scss'
