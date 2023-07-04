@@ -29,12 +29,19 @@ import 'styles/typography.scss'
 // https://nextjs.org/docs/basic-features/pages#static-generation-with-data
 
 // Layouts
+import 'styles/globals.scss'
+
+import 'styles/components.scss'
+import 'styles/layout.scss'
+import 'styles/modules.scss'
+
 // https://nextjs.org/docs/basic-features/layouts
 
 // Slugs in Link List
 // https://nextjs.org/docs/api-reference/next/link
 
 // https://www.smashingmagazine.com/2021/06/client-side-routing-next-js/
+
 
 function App({ Component, pageProps }) {
   return (
