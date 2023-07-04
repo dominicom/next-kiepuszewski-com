@@ -1,5 +1,6 @@
 // const remarkUnwrapImages = require('remark-unwrap-images')
-const path = require('path')
+const path = require('path');
+const sass = require("sass");
 
 
 module.exports = {
@@ -7,10 +8,11 @@ module.exports = {
   images: {
     domains: ['cdn.pixabay.com'],
   },
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-    prependData: `@import "./styles/internal.scss";`,
-  },
+  // sassOptions: {
+  //   implementation: sass,
+  //   includePaths: [path.join(__dirname, 'styles/internal/')],
+  //   prependData: [`@import "styles/internal/componnts.scss";`, `@import "styles/internal/modules.scss";`],
+  // },
 }
 
 
