@@ -21,7 +21,7 @@ import 'styles/typography.scss';
 
 
 
-import 'components/Button/Button.scss';
+import 'components/Button/button.scss';
 import 'components/Card/Card.scss';
 // import 'components/Menu/Menu.scss';
 import 'components/Tile/Tile.scss';
