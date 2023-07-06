@@ -22,12 +22,12 @@ import 'styles/typography.scss';
 
 
 import 'components/Button/button.scss';
-import 'components/Card/Card.scss';
+import 'components/Card/card.scss';
 // import 'components/Menu/Menu.scss';
 import 'components/Tile/Tile.scss';
 
 import 'layout/Grid/Column.scss';
-import 'layout/Grid/Row.scss';
+import 'layout/Grid/row.scss';
 
 import 'modules/Menu/menu.scss';
 import 'modules/Header/header.scss';
