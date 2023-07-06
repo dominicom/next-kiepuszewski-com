@@ -8,6 +8,9 @@ module.exports = {
   images: {
     domains: ['cdn.pixabay.com'],
   },
+  sassOptions: {
+    additionalData: `@import "styles/variables.scss"; @import "styles/internal.scss"; @import "styles/internal/componnts.scss";`,
+  },
   // sassOptions: {
   //   implementation: sass,
   //   includePaths: [path.join(__dirname, 'styles/internal/')],

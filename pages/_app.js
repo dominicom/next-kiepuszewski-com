@@ -14,15 +14,37 @@ import Container from 'containers/Container'
 // import { Card, ImageCard, Tile } from 'components'
 // import Image from 'next/image'
 
-import 'styles/global.scss'
+import 'styles/global.scss';
+import 'styles/layout.scss'
+import 'styles/typography.scss';
 // import 'styles/internal.scss'
+
+
+
+import 'components/Button/Button.scss';
+import 'components/Card/Card.scss';
+// import 'components/Menu/Menu.scss';
+import 'components/Tile/Tile.scss';
+
+import 'layout/Grid/Column.scss';
+import 'layout/Grid/Row.scss';
+
+import 'modules/Menu/menu.scss';
+import 'modules/Header/header.scss';
 
 // Problem with SASS loader
 // https://stackoverflow.com/questions/66716218/error-compiling-nextjs-sass-global-stylesheets-when-deploying-to-vercel
-import 'styles/components.scss'
-import 'styles/modules.scss'
-import 'styles/layout.scss'
-import 'styles/typography.scss'
+
+// Absolue paths
+// https://dev.to/olaj/import-and-use-from-absolute-paths-in-nextjs-e1m
+
+// Mixins tutorial
+// https://www.freecodecamp.org/news/how-to-use-sass-with-css-modules-in-next-js/
+
+// import 'styles/components.scss'
+// import 'styles/modules.scss'
+// import 'styles/layout.scss'
+// import 'styles/typography.scss'
 
 // This example make job!
 // https://github.com/vercel/next.js/tree/canary/examples/blog-starter
