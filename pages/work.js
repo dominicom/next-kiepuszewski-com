@@ -6,7 +6,8 @@ import {
   IconButton,
 } from 'components/Button'
 
-import { Grid } from 'layout'
+import { Grid, Row, Column } from 'layout'
+import { Card } from 'components'
 import { Defaultpage } from 'templates/Defaultpage'
 import styles from '../styles/Home.module.css'
 
@@ -63,6 +64,14 @@ export default function Work() {
             </a>
           </Link>
         </div>
+      </Grid>
+      <Grid>
+      <Row>
+        {/* <Column col={4} colMd={8} colLg={4} noGutter> */}
+          <Card ratio="2x1" dark />
+          <Card ratio="1x1" dark />
+        {/* </Column> */}
+      </Row>
       </Grid>
 
       <Markdown theme="g100" filename='work.mdx' />

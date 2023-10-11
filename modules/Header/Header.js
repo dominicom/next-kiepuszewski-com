@@ -1,4 +1,4 @@
-//import { useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 // import { useHover } from 'utils/hooks';
 
 import { cn } from 'utils/helpers';
@@ -25,6 +25,22 @@ const Header = ({
     isHoverHomeButton 
   }) => {
     
+  const [scrollY, setScrollY] = useState(0);
+
+  const onScroll = useCallback(event => {
+    const { pageYOffset, scrollY } = window;
+    console.log("yOffset", pageYOffset, "scrollY", scrollY);
+    setScrollY(window.pageYOffset);
+  }, []);
+
+  useEffect(() => {
+    //add eventlistener to window
+    window.addEventListener("scroll", onScroll, { passive: true });
+    // remove event on unmount to prevent a memory leak with the cleanup
+    return () => {
+       window.removeEventListener("scroll", onScroll, { passive: true });
+    }
+  }, []);
   // const [hoverRef, isHovered] = useHover();
 
   // useEffect(
@@ -36,7 +52,7 @@ const Header = ({
 
   const classes = {
     root: cn(styles.module, 'Header-module'), // ToDo -> context and possible classes: isHover.homeButton && !global && "hovered", "Header", "Header-container"
-    navigationModule: 'Header--navigation-module',
+    navigationModule: cn(styles.container, 'Header--navigation-module')
   }
 
   const handleHomeButtonClick = global => {
@@ -73,36 +89,14 @@ const Header = ({
   
   return(
     <header className={classes.root} >
-      <HeaderItem>
-        <HomeButton />
-      </HeaderItem>
+      <div className={styles.home}>
+        <HeaderItem>
+          <HomeButton />
+        </HeaderItem>
+      </div>
+
+
       <HeaderGlobalModule />
-{/* 
-        <HomeButton 
-          
-
-          to={global ? { 
-            pathname: `/`, 
-            state: { page: `home` }
-          } : { 
-            pathname: `/content`, 
-            state: { page: `content` }
-          }}
-
-
-          to={global ? { 
-            pathname: `/`, 
-            state: { page: `home` }
-          } : null}
-
-          to={global && !mobile ? { 
-            pathname: `/`, 
-            state: { page: `home` }
-          } : null}
-
-          onClick={() => handleHomeButtonClick(global)}
-        /> 
-*/}
 
         {!global && (
           <div 

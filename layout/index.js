@@ -1,9 +1,11 @@
 import { 
   Grid,
-  Row 
+  Row,
+  Column 
 } from './Grid';
 
 export {
   Grid,
-  Row
+  Row,
+  Column
 }

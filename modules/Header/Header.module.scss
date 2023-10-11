@@ -1,8 +1,19 @@
 @import '../../styles/variables.scss';
 @import 'styles/custom-media.scss';
 
+
+
+
+	$header-outer-height: calc(100vh - 7.5em); // 75vh;
+	$header-inner-height: 6.75rem;
+	$header-height-difference: calc(
+		$header-outer-height - $header-inner-height
+	);
+
+
 .module {
-  padding: $space-16 $space-16 0;
+  padding: 0 $space-16 0 $space-16;
+  // padding: $space-16 $space-16 0;
   // @media screen and (max-width: $layout-xs) {
   //   padding: $space-12;
   // }
@@ -11,8 +22,14 @@
   //background: blue;
   display: flex;
   width: 100%;
-  position: fixed;
-  top: 0;
+  	/* Make it stick */
+	height: $header-outer-height;
+	position: sticky;
+	top: calc(
+		$header-height-difference * -1
+	); /* Multiply by -1 to get a negative value */
+  // position: fixed;
+  // top: 0;
   z-index: 10000;
   transition: 150ms ease;
   pointer-events: none;
@@ -20,6 +37,23 @@
   .substyle {
     color: red;
   }
+}
+.home {
+  padding: $space-16 0 0 0;
+  position: sticky;
+	top: 0;
+  height: $header-inner-height;
+}
+.container {
+	/* Make it stick */
+  padding: $space-16 0 0 0;
+	height: $header-inner-height;
+  
+	position: sticky;
+	top: 100%;
+  // top: calc(
+	// 	$header-height-difference * -1
+	// );
 }
 
 .item {

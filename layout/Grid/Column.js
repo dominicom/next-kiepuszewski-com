@@ -34,7 +34,7 @@ export default function Column(props) {
   } = props;
   
   /*
-      This calculate numbers columns global (col) and at breakpoints (colLg and so far)  
+      This calculate numbers columns global (col) and at breakpoints (colLg and so on)  
   */
 
   const colNum = grid.renderColumns(col);
@@ -42,10 +42,10 @@ export default function Column(props) {
   const colMdNum = grid.renderMediumColumns(colMd);
   const colSmNum = grid.renderMediumColumns(colSm);
 
-  if (id) {
-    console.log(`id check ${id}`, col, colSm, colMd, colLg);
-    console.log(`id check ${id} numbsy`, colNum, colSmNum, colMdNum, colLgNum);
-  }
+  // if (id) {
+  //   console.log(`id check ${id}`, col, colSm, colMd, colLg);
+  //   console.log(`id check ${id} numbsy`, colNum, colSmNum, colMdNum, colLgNum);
+  // }
 
 
 
@@ -77,7 +77,10 @@ export default function Column(props) {
     );
 
   return(
-    <div className={classes} data-id={id ? id : null}>
+    <div 
+      className={classes} 
+      data-id={id ? id : null}
+    >
       {children}
     </div>
   );

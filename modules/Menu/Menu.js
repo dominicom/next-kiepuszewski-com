@@ -46,7 +46,7 @@ const NavLink = props => {
   // const {} = props;
 
   // ToDo aria labels, alt texts
-  const classes = cn(styles.item, 'MenuItem', 'menu-link', 'inverted', 'themed-color', props.activeClassName);  // , selected ? "selected" : "", hash, selected  && "selected"
+  const classes = cn(styles.item, props.label, 'MenuItem', 'menu-link', 'inverted', 'themed-color', props.activeClassName);  // , selected ? "selected" : "", hash, selected  && "selected"
   return( 
     <HeaderItem>
       <Link {...props}>

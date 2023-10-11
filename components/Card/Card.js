@@ -8,7 +8,13 @@ import { cn } from 'utils/helpers';
 
 export default function Card(props) {
 
-  const { children, dark, ratio, nospacing, minicard } = props;
+  const { 
+    children, 
+    dark, 
+    ratio, 
+    nospacing, 
+    minicard 
+  } = props;
 
   const columnProps = {
     colSm: props.colSm,

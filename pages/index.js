@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import ReactGA from "react-ga4"
-import { Grid } from 'layout'
+import { Grid, Row, Column } from 'layout'
+import { Card } from 'components'
 import { Defaultpage } from 'templates/Defaultpage'
 import styles from 'styles/Home.module.css'
 
@@ -39,11 +40,38 @@ export default function Home() {
       </button>
 
 
-      <Grid>
+      <Grid id="work">
         <h1 className={styles.title}>
           Welcome, Welcome!
         </h1>
         <h2>Everybody is welcome!</h2>
+        
+        <Row>
+          
+
+          <Column col={4} colMd={8} colLg={4} noGutter>
+            <Card ratio="2x1" dark />
+            <Card ratio="2x1" dark />
+          </Column>
+          
+          <Card ratio="2x1" col={8} colMd={8} colLg={4} dark />
+          <Column col={4} colMd={8} colLg={4} empty />
+          
+
+          <Column col={4} colMd={4} colLg={4} noGutter>
+            <Card ratio="1x2" dark />
+          </Column>
+          <Column col={4} colMd={4} colLg={4} noGutter>
+            <Card ratio="1x1" dark />
+            <Card ratio="1x1" dark />
+          </Column>
+          <Column col={4} colMd={8} colLg={4} noGutter>
+            <Card ratio="2x1" dark />
+            <Card ratio="1x1" dark />
+          </Column>
+
+          <Card ratio="4x3" col={8} colMd={8} colLg={8} dark />
+        </Row>
       </Grid>
 
 
@@ -80,7 +108,8 @@ export default function Home() {
           </Link>
         </div>
       </Grid>
-      
+
+
     </Defaultpage>
   )
 }
