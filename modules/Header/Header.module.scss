@@ -26,6 +26,7 @@
 	height: $header-outer-height;
   position: -webkit-sticky;
 	position: sticky;
+  // overflow: auto;
     /* MAGIC HAPPENS HERE */
     transform: translateZ(0);
     -moz-transform: translatez(0);
@@ -50,6 +51,8 @@
   padding: $space-16 0 0 0;
   position: -webkit-sticky;
   position: sticky;
+  display: flex;
+  overflow: auto;
       /* MAGIC HAPPENS HERE */
       transform: translateZ(0);
       -moz-transform: translatez(0);
@@ -64,9 +67,10 @@
 	/* Make it stick */
   padding: $space-16 0 0 0;
 	height: $header-inner-height;
-  
+  display: flex;
   position: -webkit-sticky;
   position: sticky;
+  overflow: auto;
       /* MAGIC HAPPENS HERE */
       transform: translateZ(0);
       -moz-transform: translatez(0);
