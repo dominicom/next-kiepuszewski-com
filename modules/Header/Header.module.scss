@@ -24,7 +24,15 @@
   width: 100%;
   	/* Make it stick */
 	height: $header-outer-height;
+  position: -webkit-sticky;
 	position: sticky;
+    /* MAGIC HAPPENS HERE */
+    transform: translateZ(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    -webkit-transform: translateZ(0);
+    -webkit-font-smoothing: antialiased; /* seems to do the same in Safari */
 	top: calc(
 		$header-height-difference * -1
 	); /* Multiply by -1 to get a negative value */
@@ -40,7 +48,15 @@
 }
 .home {
   padding: $space-16 0 0 0;
+  position: -webkit-sticky;
   position: sticky;
+      /* MAGIC HAPPENS HERE */
+      transform: translateZ(0);
+      -moz-transform: translatez(0);
+      -ms-transform: translatez(0);
+      -o-transform: translatez(0);
+      -webkit-transform: translateZ(0);
+      -webkit-font-smoothing: antialiased; /* seems to do the same in Safari */
 	top: 0;
   height: $header-inner-height;
 }
@@ -49,7 +65,15 @@
   padding: $space-16 0 0 0;
 	height: $header-inner-height;
   
-	position: sticky;
+  position: -webkit-sticky;
+  position: sticky;
+      /* MAGIC HAPPENS HERE */
+      transform: translateZ(0);
+      -moz-transform: translatez(0);
+      -ms-transform: translatez(0);
+      -o-transform: translatez(0);
+      -webkit-transform: translateZ(0);
+      -webkit-font-smoothing: antialiased; /* seems to do the same in Safari */
 	top: 100%;
   // top: calc(
 	// 	$header-height-difference * -1
