@@ -17,6 +17,10 @@ export const Defaultpage = props => {
       <Head>
         <title>title from database</title>
         <meta name="description" content="tu jakis opis" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
