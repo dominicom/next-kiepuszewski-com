@@ -1,14 +1,14 @@
-@import '../../styles/variables.scss';
+@import 'styles/variables.scss';
 @import 'styles/custom-media.scss';
 
 
 
 
-	$header-outer-height: calc(100vh - 7.5em); // 75vh;
-	$header-inner-height: 6.75rem;
-	$header-height-difference: calc(
-		$header-outer-height - $header-inner-height
-	);
+// $header-outer-height: calc(100vh - 7.5em); // 75vh;
+// $header-inner-height: 6.75rem;
+// $header-height-difference: calc(
+//   $header-outer-height - $header-inner-height
+// );
 
 
 .module {
@@ -52,7 +52,7 @@
   position: -webkit-sticky;
   position: sticky;
   display: flex;
-  overflow: auto;
+  // overflow: auto;
       /* MAGIC HAPPENS HERE */
       transform: translateZ(0);
       -moz-transform: translatez(0);
@@ -68,9 +68,10 @@
   padding: $space-16 0 0 0;
 	height: $header-inner-height;
   display: flex;
+  flex-wrap: wrap;
   position: -webkit-sticky;
   position: sticky;
-  overflow: auto;
+  // overflow: auto;
       /* MAGIC HAPPENS HERE */
       transform: translateZ(0);
       -moz-transform: translatez(0);
@@ -83,6 +84,13 @@
 	// 	$header-height-difference * -1
 	// );
 }
+
+.globalModule {
+  flex: 1 1 0;
+}
+
+
+// ToDo: Obsolete & Delete
 
 .item {
   // height: 5.75rem;
@@ -108,6 +116,3 @@
   }
 }
 
-.globalModule {
-  flex: 1 1 0;
-}

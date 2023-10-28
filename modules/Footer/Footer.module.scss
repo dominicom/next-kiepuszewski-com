@@ -1,6 +1,8 @@
 @import '../../styles/variables.scss';
 
 .footer {
+  position: sticky;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   min-height: 10rem;
@@ -9,6 +11,7 @@
   background-color: $gray-100; 
   width: 100%;
   min-height: 20rem;
+  z-index: -200;
 }
 
 .container {

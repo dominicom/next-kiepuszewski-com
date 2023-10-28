@@ -90,9 +90,11 @@ const Header = ({
   return(
     <header className={classes.root} >
       <div className={styles.home}>
-        <HeaderItem>
+        <HomeButton />
+        {/* <HeaderItem>
           <HomeButton />
-        </HeaderItem>
+        </HeaderItem> */}
+        
       </div>
 
 

@@ -1,5 +1,9 @@
 // import { MDXProvider } from '@mdx-js/react'
 import { MDXProvider } from 'components/MDXProvider'
+import { StateProvider } from 'context/store.js';
+import ReactGA from 'react-ga4'
+
+
 
 import { 
   Header, 
@@ -8,29 +12,30 @@ import {
   Footer 
 } from 'modules';
 
-import Container from 'containers/Container'
+// import Container from 'containers/Container'
 
 // import { Grid, Row, Column } from 'layout/Grid'
 // import { Card, ImageCard, Tile } from 'components'
 // import Image from 'next/image'
 
 import 'styles/global.scss';
+import 'styles/components.scss'
+import 'styles/modules.scss'
 import 'styles/layout.scss'
 import 'styles/typography.scss';
 // import 'styles/internal.scss'
 
 
 
-import 'components/Button/button.scss';
-import 'components/Card/card.scss';
+// import 'components/Button/button.scss';
+// import 'components/Card/card.scss';
 // import 'components/Menu/Menu.scss';
-import 'components/Tile/Tile.scss';
+// import 'components/Tile/Tile.scss';
 
-import 'layout/Grid/Column.scss';
-import 'layout/Grid/row.scss';
 
-import 'modules/Menu/menu.scss';
-import 'modules/Header/header.scss';
+
+// import 'modules/Menu/menu.scss';
+// import 'modules/Header/header.scss';
 
 // Problem with SASS loader
 // https://stackoverflow.com/questions/66716218/error-compiling-nextjs-sass-global-stylesheets-when-deploying-to-vercel
@@ -63,10 +68,18 @@ import 'modules/Header/header.scss';
 
 // https://www.smashingmagazine.com/2021/06/client-side-routing-next-js/
 
+// GA
+// https://www.npmjs.com/package/nextjs-google-analytics
+
+// ReactGA.initialize('G-635CBZ242W');
+// ReactGA.send({ hitType: "pageview", page: "/portfolio", title: "**NEW_PAGE** Clicked portfolio (ie. from Resume)" });
+// ReactGA.send({ hitType: "pageview", page: "/#work", title: "**NEW_PAGE** Read section <Work />" });
+// ReactGA.send({ hitType: "pageview", page: "/#about", title: "**NEW_PAGE** Read section <About />" });
+// ReactGA.send({ hitType: "pageview", page: "/#contact", title: "**NEW_PAGE** Read section <Contact />" });
 
 function App({ Component, pageProps }) {
   return (
-    <>
+    <StateProvider>
       <Header>
         <Menu />
       </Header>
@@ -76,7 +89,7 @@ function App({ Component, pageProps }) {
       </MDXProvider>
 
       <Footer />
-    </>
+    </StateProvider>
   )
 }
 

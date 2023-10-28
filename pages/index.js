@@ -1,18 +1,17 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
-import ReactGA from "react-ga4"
+// import Image from 'next/image'
+
 import { Grid, Row, Column } from 'layout'
-import { Card } from 'components'
+import { Button, Callout, Card } from 'components'
 import { Defaultpage } from 'templates/Defaultpage'
+
 import styles from 'styles/Home.module.css'
 
 import Intro from 'components/Intro'
 
-ReactGA.initialize('G-635CBZ242W');
-ReactGA.send({ hitType: "pageview", page: "/portfolio", title: "Clicked portfolio (ie. from Resume)" });
-ReactGA.send({ hitType: "pageview", page: "/#work", title: "Read section <Work>" });
+
 
 export default function Home() {
   const router = useRouter();
@@ -28,16 +27,27 @@ export default function Home() {
 
       <Intro />
 
-      <button
+
+      <Callout>
+        <Button
+        kind="primary"
+        renderIcon="ArrowDown"
         onClick={() => {
-          router.push({
-            pathname: "/",
-            hash: "work"
-          });
-        }}
-      >
-        Static page with hash (good)
-      </button>
+            router.push({
+              pathname: "/",
+              hash: "work"
+            });
+          }}
+        >        
+          Static page with hash (good)
+        </Button>
+        <Button kind="secondary" renderIcon />
+        <Button renderIcon="ExternalLink">Click me!</Button> 
+
+      </Callout>
+
+
+
 
 
       <Grid id="work">

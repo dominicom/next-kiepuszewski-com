@@ -12,6 +12,7 @@
   @media screen and (max-width: $layout-md) {
     height: calc(100vh - 5.5em);
   }
+  z-index: -100;
 }
 
 .image {

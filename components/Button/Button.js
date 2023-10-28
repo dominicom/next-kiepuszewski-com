@@ -6,7 +6,7 @@ export default function Button(props) {
   const {
     children,
     className,
-    // label,
+    label,
     onClick,
     renderIcon,
     kind,
@@ -46,7 +46,9 @@ export default function Button(props) {
       disabled={disabled}
       {...other}
     >
+      {!children && label}
       {!hasOnlyIcon && children}
+      {!children && !label && <span>Button</span>}
       {renderIcon && RenderIconComponent(renderIcon)}
     </Component>
   );
@@ -59,6 +61,8 @@ const RenderIconComponent = (icon) => {
   }
   if (typeof icon === "function") {
     return icon
+  } else {
+    return <Icon className="dtm--button__icon" size={16} name="Circle" stroke={1.75} />;
   }
   return null
 }

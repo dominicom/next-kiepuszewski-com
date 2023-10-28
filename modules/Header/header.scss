@@ -12,9 +12,30 @@
   transition: 150ms ease;
 }
 
-.HomeButton-container {
+.Header-item {
+  // height: 5.75rem;
   display: flex;
+  margin: { right: $space-02; bottom: $space-02 };
+  pointer-events: auto;
+  background-color: $white;
+  transition: background-color 150ms, box-shadow 150ms;
+  // box-shadow: $elev-100;
+  // &:hover {
+  //   background-color: $gray-20;
+  // }
+  &:hover {
+    box-shadow: 0 0.25rem 0.5rem rgba($black, 0.125); //$elev-100;
+    z-index: 1000;
+  }
+  a {
+    padding: $space-16;
+    // @media screen and (max-width: $layout-xs) {
+    //   padding: $space-12;
+    // }
+    cursor: pointer;
+  }
 }
+
 
 
 .Header .FocusArea {

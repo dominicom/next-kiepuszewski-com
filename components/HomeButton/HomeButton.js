@@ -2,8 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { Logo } from 'components/Brand';
 import { pages } from 'utils/settings';
+import { cn } from 'utils/helpers';
 
-// import styles from './HomeButton.module.scss';
+import styles from './HomeButton.module.scss';
 
 
 const route = pages[0];
@@ -20,12 +21,17 @@ const Component = ({ children, href, className }) => {
   return <Link href={href} className={className}>{children}</Link>;
 }
 
-export const HomeButton = ({ onClick, to }) => {
+export const HomeButton = ({ onClick, to, theme }) => {
+
+  const classes = {
+    root: cn(styles.module, 'Home-button', 'Header-item'),
+    container: cn('HomeButton-container', 'active')
+  }
   
   return(
-    <Component href={route.href} className="HomeButton-container">
-      <a className="Home-button" onClick={onClick} >
-        <div className="Logo-container">
+    <Component href={route.href} className="Header-item">
+      <a className={classes.root} onClick={onClick} >
+        <div className={classes.container}>
           <Logo />
         </div>
       </a>

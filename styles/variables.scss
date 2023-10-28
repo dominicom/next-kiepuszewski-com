@@ -170,3 +170,10 @@ $spacer-3xl: 8rem;
 
 
 $header-space: $spacer-3xl; // 8rem;
+
+$header-inner-height: 6.75rem;
+$header-outer-height: calc(100vh - ($header-inner-height + 0.75rem)); // 75vh;
+
+$header-height-difference: calc(
+  $header-outer-height - $header-inner-height
+);
