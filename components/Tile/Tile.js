@@ -1,13 +1,28 @@
 import React from 'react';
 import { Column } from 'layout/Grid';
 
+import Link from 'next/link';
+
 import { cn } from 'utils/helpers';
 
 
 
 export default function Tile(props) {
 
-  const { className, children, subtitle, title, dark, col, noGutter, gutter, gutterLeft, gutterRight, ratio } = props;
+  const { 
+    className, 
+    children,
+    href, 
+    subtitle, 
+    title, 
+    dark, 
+    col, 
+    noGutter, 
+    gutter, 
+    gutterLeft, 
+    gutterRight, 
+    ratio 
+  } = props;
 
   const columnProps = {
     col: col,
@@ -17,30 +32,50 @@ export default function Tile(props) {
     gutterRight: gutterRight
   }
 
+  let isLink;
+  if (href !== undefined) {
+    isLink = href.charAt(0) === '/';
+  }
 
   const classes = {
     tile: cn('Tile', dark && 'dark' ), // ratio && 'aspect-ratio'
     container: 'Tile-container'
   }
 
-  const Element = 
-    <div className={classes.tile}>
-      <div className={classes.container}>
-        {subtitle && <Subtitle content={subtitle} />}
-        {title && <Title content={title} />}
-        {children}
-      </div>
-    </div>
+  const TileContainer = (
+    <>
+      {subtitle && <Subtitle content={subtitle} />}
+      {title && <Title content={title} />}
+      {children}
+    </>
+  )
+
+  let TileComponent;
+  if (isLink === true) {
+    TileComponent = (
+      <Link href={href}>
+        <a className={classes.tile}>
+          {TileContainer}
+        </a>
+      </Link>
+    );
+  } else {
+    TileComponent = (
+      <a className={classes.tile}>
+        {TileContainer}
+      </a>
+    );
+  }
 
   if (col) {
     return(
       <Column {...columnProps}>
-        {Element}
+        {TileComponent}
       </Column>
     );
   } else {
     return(
-      <>{Element}</>
+      <>{TileComponent}</>
     );
   }
 }
@@ -48,7 +83,9 @@ export default function Tile(props) {
 Tile.defaultProps = {
   ratio: true,
   noGutter: true,
-  //gutter: false
+  //gutter: false,
+  subtitle: 'Subtitle',
+  title: 'Title',
 };
 
 

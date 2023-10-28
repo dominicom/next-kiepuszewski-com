@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { cn } from 'utils/helpers'
+
 import styles from './Image.module.scss'
 
 // @See Docs
@@ -30,9 +32,15 @@ export default function Image(props) {
   const { highResImageLoaded } = state;
   let filteredProps = omit(props, 'overlaySrc')
   console.log(filteredProps)
-  let fgh = highResImageLoaded && { opacity: '0' }
+  let fgh = highResImageLoaded && { opacity: '0' } // ToDo parameter name to change!
+
+  const classes = {
+    root: cn(styles.module, 'image-wrapper'),
+    image: cn(props.className)
+  }
+
   return (
-    <div className={styles.module}>
+    <div className={classes.root}>
       <img
         {...filteredProps}
         onLoad={() => {

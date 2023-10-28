@@ -1,6 +1,7 @@
 // import { MDXProvider } from '@mdx-js/react'
 import { MDXProvider } from 'components/MDXProvider'
-import { StateProvider } from 'context/store.js';
+import { StateProvider } from 'context/store.js'
+// import { GeistSans, GeistMono } from 'geist/font'
 import ReactGA from 'react-ga4'
 
 

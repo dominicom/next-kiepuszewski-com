@@ -1,6 +1,8 @@
 import React from 'react';
 import { Column } from 'layout/Grid';
 import Tile from 'components/Tile';
+import Icon from 'components/Icon';
+
 
 import { cn } from 'utils/helpers';
 
@@ -10,10 +12,12 @@ export default function Card(props) {
 
   const { 
     children, 
+    href,
     dark, 
     ratio, 
     nospacing, 
-    minicard 
+    minicard,
+    staticCard
   } = props;
 
   const columnProps = {
@@ -26,9 +30,6 @@ export default function Card(props) {
     gutterLeft: props.gutterLeft,
     gutterRight: props.gutterRight
   }
-  const tileProps = {
-    dark: props.dark,
-  }
 
   const cardClasses = cn(
     'Card', 
@@ -36,17 +37,26 @@ export default function Card(props) {
     minicard && 'minicard-style'
   )
 
+  const tileProps = {
+    subtitle: props.subtitle,
+    title: props.title,
+    href: props.href,
+    dark: props.dark,
+  }
   
-  const aspectRatio = cn(
-    `aspect-ratio`, 
-    ratio !== true ? `aspect-ratio--${ratio}` : 'aspect-ratio--1x1'
-  )
+  const aspectRatio = cn(`aspect-ratio`, ratio !== true ? `aspect-ratio--${ratio}` : 'aspect-ratio--1x1')
 
   const classes = {
     card: cn('Card', dark && 'dark', minicard && 'minicard-style'),
     aspect: cn(ratio && aspectRatio, !nospacing && 'card--spacing'), // !nospacing && 'card--spacing'
-    container: cn('Card-container', ratio && 'aspect-ratio--object') // 'Card-container',   
+    container: cn('Card-container', ratio && 'aspect-ratio--object'), // 'Card-container',   
+    action: cn('Card-action')
   }
+
+  const Action =
+    <div className={classes.action}>
+      <Icon name="ArrowRight" />
+    </div>
 
   const Element = 
     <div className={classes.card}>
@@ -54,6 +64,7 @@ export default function Card(props) {
         <div className={classes.container}>
             <Tile {...tileProps} >
               {children}
+              {Action}
             </Tile>
         </div>
       </div>
@@ -73,7 +84,11 @@ export default function Card(props) {
 }
 
 Card.defaultProps = {
-  ratio: false,
+  ratio: true,
   noGutter: true,
-  //gutter: false
+  //gutter: false,
+  // subtitle: 'Subtitle',
+  title: 'Title',
+  ratio: "2x1",
+  dark: false
 };

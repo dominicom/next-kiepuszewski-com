@@ -11,45 +11,40 @@
   }
 }
 
-
+a.Tile {
+  display: block;
+}
 .Tile {
   position: relative;
   transition: background-color 150ms ease;
+  padding: 1rem;
   width: 100%;
   height: 100%;
-
-  // TODO: move this code into aspect ratio object
-  // &[class*="aspect-ratio"] {
-  //   // padding-bottom: 100%;
-  //   min-width: 10rem;
-  //   .Tile-container {
-  //     position: absolute;
-  //   }
-  // }
-  .Tile-container {
-    padding: 1rem;
-  }
-  // margin-right: 0.125rem;
-  // margin-bottom: 0.125rem;
   color: $gray-100;
   background-color: $gray-10;
+
   &:hover {
     background-color: $gray-20;
   }
+  
   &:last-child {
     flex-grow: 1;
   }
   .Tile-subtitle {
-    font-size: 0.75em;
-    font-weight: 800;
-    margin-bottom: 0.75em;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
   }
   .Tile-title {
-    font-size: 1em;
-    font-weight: 600;
-    margin-bottom: 1em;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    font-weight: 300;
+    margin-bottom: 1rem;
   }
   .Tile-subtitle, .Tile-title {
+    position: relative;
+    z-index: 1;
     margin-top: 0;
   }
 }

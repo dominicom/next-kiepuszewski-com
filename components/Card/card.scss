@@ -19,8 +19,6 @@ $card-gutter: $space-02;
   // margin-bottom: $space-02;
   // padding: $space-01;
 
-  // background-color: aqua;
-
   .Card-container {
     height: calc(100% - $card-gutter);
     width: calc(100% - $card-gutter);
@@ -35,20 +33,16 @@ $card-gutter: $space-02;
 .Card {
   position: relative;
   transition: background-color 150ms ease;
-
-
-  // &.aspect-ratio--flex.aspect-ratio {
-  //   height: 100%;
-  // }
-
-  // margin-right: $space-02;
-  // margin-bottom: $space-02;
+  .Tile {
+    padding: 1rem $spacer-xxl 1rem 1rem;
+  }
 
   &.minicard-style {
     .Card-container {
       min-height: 3rem;
     }
   }
+
   .Card-container {
     min-height: 4rem;
     display: flex;
@@ -58,28 +52,13 @@ $card-gutter: $space-02;
       height: 100%;
     }
   }
-  // TODO: remove when small gutters will be fixed!
-  &.card--spacing {
-    // margin-right: 1px;
-    // margin-bottom: 1px;
-    // margin: 1px;
-    // margin: 1px;
-    // padding-right: 1px;
-    // padding-bottom: 1px;
-
-
-    // .Card-container {
-    //   width: calc(100% - 1px);
-    //   height: calc(100% - 1px);
-    // }
+  .Card-action {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 1rem;
+    bottom: 1rem;
   }
-
-
-  // color: $gray-100;
-  // background-color: $gray-10;
-  // &:hover {
-  //   background-color: $gray-20;
-  // }
 
   // TODO: remove this when Tile layout is fixed
 
@@ -88,72 +67,3 @@ $card-gutter: $space-02;
   }
   cursor: pointer;
 }
-
-// .Card.dark {
-//   background-color: $gray-90;
-//   &:hover {
-//     background-color: $gray-80;
-//   }
-//   color: $white;
-// }
-
-// [class*="white"],
-// [class*="g00"] {
-//   .Card {
-//     position: relative;
-//     background-color: $gray-10 !important;
-//     &:hover {
-//       background-color: $gray-20 !important;
-//     }
-//   }
-// }
-
-// [class*="g10"] {
-//   .Card {
-//     position: relative;
-//     background-color: $white;
-//     &:hover {
-//       background-color: $gray-20;
-//     }
-//   }
-// }
-// [class*="g20"] {
-//   .Card {
-//     position: relative;
-//     background-color: $white;
-//     &:hover {
-//       background-color: $gray-10;
-//     }
-//   }
-// }
-// [class*="white"],
-// [class*="g10"],
-// [class*="g20"] {
-//   .Card.dark {
-//     background-color: $gray-80 !important;
-//     &:hover {
-//       background-color: $gray-70 !important;
-//     }
-//     color: $white;
-//   }
-// }
-
-// [class*="g90"] {
-//   .Card.dark {
-//     background-color: $gray-80;
-//     &:hover {
-//       background-color: $gray-70;
-//     }
-//     color: $white;
-//   }
-// }
-
-// [class*="g100"] {
-//   .Card.dark {
-//     background-color: $gray-90;
-//     &:hover {
-//       background-color: $gray-80;
-//     }
-//     color: $white;
-//   }
-// }

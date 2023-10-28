@@ -65,9 +65,11 @@ export default function Column(props) {
       // colMdNum ? `col-md-${colMd}` : `col-md-${colMd || 4}`,
       // colSmNum ? `col-sm-${colSm}` : `col-sm-${colSm || 4}`, 
 
-      colLgNum && `col-lg-${colLgNum}`,
-      colMdNum && `col-md-${colMdNum}`,
+      
+      
       colSmNum && `col-sm-${colSmNum}`, 
+      colMdNum && `col-md-${colMdNum}`,
+      colLgNum && `col-lg-${colLgNum}`,
 
       !empty && !noGutter && 'gutter',
 

@@ -1,5 +1,9 @@
-@import '../../styles/variables.scss';
+// @import 'styles/variables.scss';
 
-.dtm--row {
+.fbr--row {
+  display: flex;
   flex-wrap: wrap;
+  margin: 0 -1rem;
+  // background-color: magenta;
+  // padding: { left: $spacer-3xl; right: $spacer-m; top: $spacer-m; bottom: $spacer-m };
 }
