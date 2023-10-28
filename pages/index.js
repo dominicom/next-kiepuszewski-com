@@ -33,12 +33,12 @@ export default function Home() {
 
       <Callout 
         heading={`Designer × Developer`}
-        paragraph={<>
-          Creative <strong>Multi-disciplinary Graphic Designer</strong> with 15+ years' professional experience in print digital media. 
-          Almost 10-years‘ professional approach and experience in information technology branch, interactive and advertising, 
-          communication and marketing. Experienced in various roles in graphic design‒team member and independent specialist, 
-          participated and worked on many corporate projects, long-term B2B solutions and services located on all over the world.
-        </>}
+        paragraph={`
+            Creative <strong>Multi-disciplinary Graphic Designer</strong> with 15+ years' professional experience in print digital media. 
+            Almost 10-years‘ professional approach and experience in information technology branch, interactive and advertising, 
+            communication and marketing. Experienced in various roles in graphic design‒team member and independent specialist, 
+            participated and worked on many corporate projects, long-term B2B solutions and services located on all over the world.
+          `}
       >
         <Button
         kind="primary"
@@ -151,8 +151,10 @@ export default function Home() {
         <Row>
           <Column col={4} colSm={4} colMd={4} colLg={6}>
             <p className="ExpressiveParagraph">
+            {`
               We welcome all feedback, designs, or ideas in order to produce the best possible experience for our users. 
               If you’re interested in contributing, check out our contributing guidelines to get started.
+            `}
             </p> 
           </Column>
           <Column col={4} colSm={4} colMd={4} colLg={6}>

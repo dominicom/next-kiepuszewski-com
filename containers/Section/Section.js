@@ -27,8 +27,10 @@ export default function Section(props) {
             Work Work Work
           </h1>
           <p className="ExpressiveParagraph">
+            {`
               We welcome all feedback, designs, or ideas in order to produce the best possible experience for our users. 
               If you’re interested in contributing, check out our contributing guidelines to get started.
+            `}
             </p> 
         </Column>
         <Column col={6} colSm={4} colMd={4} colLg={6}>
