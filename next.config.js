@@ -48,6 +48,19 @@ module.exports = {
   //   includePaths: [path.join(__dirname, 'styles/internal/')],
   //   prependData: [`@import "styles/internal/componnts.scss";`, `@import "styles/internal/modules.scss";`],
   // },
+  async headers() {
+    return [
+      {
+        source: "/fonts/geist/GeistVF.woff2",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
+  },
 }
 
 

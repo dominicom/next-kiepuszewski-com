@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 // import Image from 'next/image'
 
 import { Grid, Row, Column } from 'layout'
-import { Button, Callout, Card, ImageCard } from 'components'
+import { Button, Callout, Card, ImageCard, Leadspace } from 'components'
 import { Defaultpage } from 'templates/Defaultpage'
 
 
@@ -28,17 +28,29 @@ export default function Home() {
 
       <Intro />
 
+      <Leadspace 
+        heading={
+          <>
+              <p>Welcome, welcome.</p>
+              <p><strong>Everybody</strong> is welcome!</p>
+              <p>Take a seat and explore.</p>
+          </>
+        }
+      
+      />
+
 
 
       <Callout 
         heading={`Designer × Developer`}
         paragraph={
-        <>
-            Creative <strong>Multi-disciplinary Graphic Designer</strong> with 15+ years&#39; professional experience in print digital media. 
-            Almost 10-years&#39; professional approach and experience in information technology branch, interactive and advertising, 
-            communication and marketing. Experienced in various roles in graphic design - team member and independent specialist, 
-            participated and worked on many corporate projects, long-term B2B solutions and services located on all over the world.
-        </>}
+          <>
+              Creative <strong>Multi-disciplinary Graphic Designer</strong> with 15+ years{`’`} professional experience in print digital media. 
+              Almost 10-years{`’`} professional approach and experience in information technology branch, interactive and advertising, 
+              communication and marketing. Experienced in various roles in graphic design{`—`}team member and independent specialist, 
+              participated and worked on many corporate projects, long-term B2B solutions and services located on all over the world.
+          </>
+        }
       >
         <Button
         kind="primary"
@@ -61,7 +73,7 @@ export default function Home() {
 
 
 
-      <Section id="work">
+      <Section id="work" hero>
         {/* <h1 className={styles.title}>
           Welcome, Welcome!
         </h1>
@@ -151,10 +163,10 @@ export default function Home() {
         <Row>
           <Column col={4} colSm={4} colMd={4} colLg={6}>
             <p className="ExpressiveParagraph">
-            {`
-              We welcome all feedback, designs, or ideas in order to produce the best possible experience for our users. 
-              If you’re interested in contributing, check out our contributing guidelines to get started.
-            `}
+            {<>
+              We welcome all <em>feedback</em>, designs, or ideas in order to produce the best possible experience for our users. 
+              If you{`’`}re interested in contributing, check out our contributing guidelines to get started.
+            </>}
             </p> 
           </Column>
           <Column col={4} colSm={4} colMd={4} colLg={6}>

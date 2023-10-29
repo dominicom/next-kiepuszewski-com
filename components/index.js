@@ -4,6 +4,7 @@ import { Card, CardGroup, ImageCard } from './Card'
 import Tile from './Tile'
 import Image from './Image'
 import Icon from './Icon'
+import { Leadspace } from './Leadspace'
 
 
 export { 
@@ -15,5 +16,6 @@ export {
   ImageCard, 
   Image,
   Icon,
+  Leadspace,
   Tile 
 }

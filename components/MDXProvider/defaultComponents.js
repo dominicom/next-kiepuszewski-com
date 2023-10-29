@@ -13,22 +13,19 @@ import {
 import Container from 'containers/Container'
 import Section from 'containers/Section'
 
-import { 
-  Button, 
-  IconButton,
-} from 'components/Button'
 
 import Icon from 'components/Icon'
 
-import { 
+import {
+  Button, 
+  IconButton,
+  Callout, 
   Card, 
   ImageCard, 
   Tile,
-  Image, 
- 
+  Image,
 } from 'components'
 
-// import Image from 'next/image'
 
 // const RowParapraph = ({ children }) => (<Row><p className={styles.paragraph}>{children}</p></Row>)
 
@@ -36,6 +33,7 @@ const components = {
   Menu,
   Button, 
   IconButton, 
+  Callout,
   Card, 
   ImageCard, 
   Tile, 

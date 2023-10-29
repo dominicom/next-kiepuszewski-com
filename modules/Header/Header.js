@@ -29,7 +29,7 @@ const Header = ({
 
   const onScroll = useCallback(event => {
     const { pageYOffset, scrollY } = window;
-    console.log("yOffset", pageYOffset, "scrollY", scrollY);
+    // console.log("yOffset", pageYOffset, "scrollY", scrollY);
     setScrollY(window.pageYOffset);
   }, []);
 

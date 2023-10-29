@@ -7,7 +7,7 @@ export default function Footer() {
   return(
     <footer className={styles.footer}>
       <div className={styles.container}>
-        I d I ™ — Place****er for website footer here!
+        I d I ™ — Placeholder for website fcuking footer here!
       </div>
       <div className={styles.powered}>
         <a

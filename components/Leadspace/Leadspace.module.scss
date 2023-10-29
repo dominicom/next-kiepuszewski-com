@@ -7,11 +7,19 @@
 }
 
 .heading {
-  font-size: calc(1.25rem + 0.5vw);
+  font-size: calc(3.25rem + 0.5vw);
+  font-weight: 300;
+  line-height: 1.3;
+  p {
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    margin: 0;
+  }
 }
 
 .parapgragh {
   width: 80%;
+  font-size: calc(1.25rem + 0.5vw);
   @media screen and (max-width: $breakpoint-medium ) {
     width: 100%;
   }

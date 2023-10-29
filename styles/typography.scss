@@ -1,14 +1,15 @@
 @import 'variables.scss';
 @import 'custom-media.scss';
 
-h1, h2, h3, h4, h5, h6 {
-  // font-family: $font-stack-grotesk-05;
-  // text-transform: uppercase;
-}
-h1 {
-  font-family: $font-stack-grotesk-05;
-  text-transform: uppercase;
-}
+// h1, h2, h3, h4, h5, h6 {
+//   font-family: $font-stack-grotesk-05;
+//   text-transform: uppercase;
+// }
+
+// h1 {
+//   font-family: $font-stack-grotesk-05;
+//   text-transform: uppercase;
+// }
 
 
 //styleName: productive/heading-07;
@@ -56,12 +57,15 @@ h4 {
 strong {
   font-weight: 600;
 }
-
+p {
+  font-style: normal;
+  font-weight: 400;
+}
 /* expressive styles */
 
 .ExpressiveParagraph {
   font-family: inherit;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 2rem;
   line-height: 1.3;
   @media screen and (max-width: $breakpoint-xlarge) {

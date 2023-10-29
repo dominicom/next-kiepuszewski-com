@@ -10,51 +10,19 @@ body {
   padding: 0;
   margin: 0;
   font-family: $font-stack;
-  // font-feature-settings: "zero" on,"ss04" on,"ss01" on,"ss02" on,"ss05" on,"ss03" on,"liga" off;
 
-  font-feature-settings: "ss04" 0;
-  // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  //   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  // font-feature-settings: "zero" on,"ss04" on,"ss01" on,"ss02" on,"ss05" on,"ss03" on,"liga" off;
+  // font-feature-settings: "ss04" 0;
+
   font-size: 1rem;
   position: relative;
 }
-
-// #__next {
-//   display: flex;
-//   flex-direction: column;
-//   min-height: 100vh;
-//   min-width: 100vh;
-// }
-
-// @media screen and (max-width: 320px) {
-//   #__next {
-//     display: flex
-//   }
-// }
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-// main {
-//   min-height: 100vh;
-//   padding: 4rem 0;
-//   flex: 1;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// ToDo -> perhabs to delete when button comes here
-button {
-  background: none;
-}
 
 // nav {
 //   margin: 0 1rem;

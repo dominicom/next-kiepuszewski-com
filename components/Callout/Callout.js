@@ -1,11 +1,9 @@
 import { cn } from 'utils/helpers'
 import { Grid, Row, Column } from 'layout'
 
-import { Button, Card } from 'components'
+// import { Button, Card } from 'components'
 
 import styles from './Callout.module.scss'
-
-const defaultTheme = ""
 
 export default function Callout(props) {
   const { children, heading, paragraph, theme } = props
@@ -35,24 +33,24 @@ export default function Callout(props) {
   }
   // className={styles.root}
   return(
-    <Grid className={classes.root} theme="g100"> 
+    <Grid className={classes.root} theme={theme}> 
       <Row className={classes.container}>
         <Column {...column.left}> 
           <h3 className={styles.heading}>
-            {heading ? heading : `Edit heading and title text`}
+            {heading}
           </h3>
 
         </Column>
 
         <Column {...column.right}>
           <p className={classes.paragraph}>
-            {paragraph ? paragraph : dummyText}
+            {paragraph}
           </p>
 
         </Column>
       </Row>
 
-      <Row className={classes}>
+      <Row className="--custom-space--">
         <Column {...column.left} empty />
         <Column {...column.right}>
           {/* <Card ratio="2x1" dark />
@@ -65,10 +63,17 @@ export default function Callout(props) {
   )
 }
 
-
 const dummyText = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 `
+
+Callout.defaultProps = {
+  theme: "",
+  heading: `Edit heading and title text`,
+  paragraph: dummyText,
+}
+
+

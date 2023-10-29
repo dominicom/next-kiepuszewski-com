@@ -19,29 +19,29 @@ export default function Section(props) {
   }
 
   let SectionHero;
-  if (!hero) {
+  if (hero) {
     SectionHero = (
       <Row className="Section-hero">
-        <Column col={6} colSm={4} colMd={4} colLg={6}>
+        <Column col={8} colSm={4} colMd={4} colLg={6}>
           <h1>
             Work Work Work
           </h1>
           <p className="ExpressiveParagraph">
-            {`
+          
               We welcome all feedback, designs, or ideas in order to produce the best possible experience for our users. 
-              If you’re interested in contributing, check out our contributing guidelines to get started.
-            `}
-            </p> 
+              If you{`’`}re interested in contributing, check out our contributing guidelines to get started.
+            
+          </p> 
         </Column>
-        <Column col={6} colSm={4} colMd={4} colLg={6}>
+        <Column col={4} colSm={4} colMd={4} colLg={6}>
           <Card
             title="See all work"
-            href="/test"
+            href="/portfolio"
             subtitle={false}
             // col={4} colSm={2} colMd={4} colLg={4}
             ratio="2x1"
           >
-            <p>This tets page with markdown dynamically loaded.</p>
+            <p>Explore more work and all my portfolio and enjoy it!</p>
           </Card>
         </Column>
       </Row>

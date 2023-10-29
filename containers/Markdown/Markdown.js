@@ -32,13 +32,19 @@ const components = {
 
 
 
-export default function Markdown({ children, theme, filename }) {
+export default function Markdown({ children, className, id, theme, filename }) {
   console.log('the filename', filename)
   const MDXContent = dynamic(() => import(`contents/${filename}`))
 
+  const gridProps = {
+    className: className,
+    id: id,
+    theme: theme,
+  }
+
   return (
     <MDXProvider components={components} >
-      <Grid>
+      <Grid {...gridProps}>
         <MDXContent />
       </Grid>
     </MDXProvider>
