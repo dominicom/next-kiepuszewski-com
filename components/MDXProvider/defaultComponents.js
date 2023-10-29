@@ -11,6 +11,7 @@ import {
 } from 'modules';
 
 import Container from 'containers/Container'
+import Section from 'containers/Section'
 
 import { 
   Button, 
@@ -44,6 +45,7 @@ const components = {
   Image,
   Icon, 
   Container,
+  Section,
 }
 
 export default components

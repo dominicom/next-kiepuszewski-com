@@ -2,14 +2,46 @@
 const path = require('path');
 const sass = require("sass");
 
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
+  output: 'export',
+ 
+  // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
+  // trailingSlash: true,
+ 
+  // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
+  // skipTrailingSlashRedirect: true,
+ 
+  // Optional: Change the output directory `out` -> `dist`
+  // distDir: 'dist',
+}
+ 
+// module.exports = nextConfig
+
 
 module.exports = {
+  nextConfig,
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      '/': { page: '/' },
+      '/work': { page: '/work' },
+      '/about': { page: '/about' },
+      '/contact': { page: '/contact' },
+      '/test': { page: '/test' },
+    }
+  },
   reactStrictMode: true,
   images: {
-    domains: ['cdn.pixabay.com'],
+    domains: ['cdn.pixabay.com', 'assets1.ello.co', 'assets2.ello.co', 'images.pexels.com'],
+    unoptimized: true,
   },
   sassOptions: {
-    additionalData: `@import "styles/variables.scss"; @import "styles/internal.scss"; @import "styles/internal/componnts.scss";`,
+    additionalData: `@import "styles/variables.scss"; @import "styles/components.scss"; @import "styles/modules.scss"; @import "styles/layout.scss"`,
   },
   // sassOptions: {
   //   implementation: sass,

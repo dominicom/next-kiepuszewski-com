@@ -7,7 +7,6 @@ import { Grid, Row, Column } from 'layout'
 import { Button, Callout, Card, ImageCard } from 'components'
 import { Defaultpage } from 'templates/Defaultpage'
 
-import styles from 'styles/Home.module.css'
 
 import Intro from 'components/Intro'
 
@@ -33,12 +32,13 @@ export default function Home() {
 
       <Callout 
         heading={`Designer × Developer`}
-        paragraph={`
-            Creative <strong>Multi-disciplinary Graphic Designer</strong> with 15+ years' professional experience in print digital media. 
-            Almost 10-years‘ professional approach and experience in information technology branch, interactive and advertising, 
-            communication and marketing. Experienced in various roles in graphic design‒team member and independent specialist, 
+        paragraph={
+        <>
+            Creative <strong>Multi-disciplinary Graphic Designer</strong> with 15+ years&#39; professional experience in print digital media. 
+            Almost 10-years&#39; professional approach and experience in information technology branch, interactive and advertising, 
+            communication and marketing. Experienced in various roles in graphic design - team member and independent specialist, 
             participated and worked on many corporate projects, long-term B2B solutions and services located on all over the world.
-          `}
+        </>}
       >
         <Button
         kind="primary"

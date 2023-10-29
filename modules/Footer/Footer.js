@@ -1,5 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
+import { Logo } from 'components/Brand';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
@@ -10,13 +11,13 @@ export default function Footer() {
       </div>
       <div className={styles.powered}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://www.kiepuszewski.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          <p>Powered by{' '}</p>
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <Logo />
           </span>
         </a>
       </div>
