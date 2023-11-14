@@ -1,25 +1,4 @@
-import React from 'react';
-
-import './MyName.scss';
-
-const MyName = () => {
-
-  return (
-    <div className="dtm-PersonaLogo">
-      <div className="Name">
-        <Do /><Mi /><Nik />
-      </div>
-      <div className="Surname">
-        <Kie /><Pusz /><Ewski />
-      </div>
-    </div>
-  )
-}
-export default MyName;
-
-
-
-const Do = () => (
+export const Do = () => (
   <div className="block do">
     <svg 
       //width="15" 
@@ -37,7 +16,7 @@ const Do = () => (
   </div>
 )
 
-const Mi = () => (
+export const Mi = () => (
   <div className="block mi">
     <svg 
       //width="13" 
@@ -54,7 +33,7 @@ const Mi = () => (
   </div>
 )
 
-const Nik = () => (
+export const Nik = () => (
   <div className="block nik">
     <svg 
       //width="14" 
@@ -70,7 +49,7 @@ const Nik = () => (
 );
 
 
-const Kie = () => (
+export const Kie = () => (
   <div className="block kie">
     <svg
       viewBox="0 0 20 6" 
@@ -86,7 +65,7 @@ const Kie = () => (
   </div>
 );
 
-const Pusz = () => (
+export const Pusz = () => (
   <div className="block pusz">
     <svg 
       viewBox="0 0 27 6"
@@ -103,7 +82,7 @@ const Pusz = () => (
   </div>
 );
 
-const Ewski = () => (
+export const Ewski = () => (
   <div className="block ewski">
     <svg 
       // width="26" 

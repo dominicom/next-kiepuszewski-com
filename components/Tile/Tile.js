@@ -1,5 +1,6 @@
 import React from 'react';
 import { Column } from 'layout/Grid';
+import RatioObject from 'components/RatioObject';
 
 import Link from 'next/link';
 
@@ -10,8 +11,9 @@ import { cn } from 'utils/helpers';
 export default function Tile(props) {
 
   const { 
-    className, 
+    className,
     children,
+    clickable,
     href, 
     subtitle, 
     title, 
@@ -38,7 +40,7 @@ export default function Tile(props) {
   }
 
   const classes = {
-    tile: cn('Tile', dark && 'dark' ), // ratio && 'aspect-ratio'
+    tile: cn(className ? className : 'Tile', 'fbr-tile', dark && 'dark' ),
     container: 'Tile-container'
   }
 
@@ -51,6 +53,7 @@ export default function Tile(props) {
   )
 
   let TileComponent;
+  /*
   if (isLink === true) {
     TileComponent = (
       <Link href={href}>
@@ -61,17 +64,47 @@ export default function Tile(props) {
     );
   } else {
     TileComponent = (
-      <a className={classes.tile}>
+      <a href={href} className={classes.tile}>
         {TileContainer}
       </a>
     );
   }
+  if (!href) {
+    TileComponent = (
+      <div className={classes.tile}>
+        {TileContainer}
+      </div>
+    );
+  }
+*/
+
+if (clickable) {
+  TileComponent = (
+    <a href={href} className={classes.tile}>
+      {TileContainer}
+    </a>
+  );
+} else {
+  TileComponent = (
+    <div className={classes.tile}>
+      {TileContainer}
+    </div>
+  );
+}
+
+  // TODO: to consider if Column feature is needed
 
   if (col) {
     return(
       <Column {...columnProps}>
         {TileComponent}
       </Column>
+    );
+  } else if (ratio) {
+    return (
+      <RatioObject>
+        {TileComponent}
+      </RatioObject>
     );
   } else {
     return(
@@ -81,12 +114,131 @@ export default function Tile(props) {
 }
 
 Tile.defaultProps = {
-  ratio: true,
+  ratio: false,
   noGutter: true,
-  //gutter: false,
-  subtitle: 'Subtitle',
-  title: 'Title',
+  // gutter: false,
+  // subtitle: undefined,
+  // title: 'Title',
 };
+
+
+export const ClickableTile = (props) => {
+
+  const { 
+    className, 
+    children,
+    empty,
+    href,
+    subtitle, 
+    title,
+    col, 
+    noGutter, 
+    gutter, 
+    gutterLeft, 
+    gutterRight, 
+    spacing,
+    ratio 
+  } = props;
+
+
+  const tileProps = {
+    href: href,
+    ratio: ratio,
+    col: col,
+    noGutter: noGutter,
+    gutter: gutter,
+    gutterLeft: gutterLeft,
+    gutterRight: gutterRight
+  }
+
+  const classes = {
+    tile: 'ClickableTile'
+  }
+
+  const TileComponent = (
+      <Tile className={classes.tile} {...tileProps} clickable>
+        {children}
+      </Tile>
+  );
+  
+  return(
+    <>{TileComponent}</>
+  );
+}
+
+ClickableTile.defaultProps = {
+  ratio: false,
+  noGutter: true,
+  spacing: false
+  // gutter: false,
+  // subtitle: undefined,
+  // title: 'Title',
+};
+
+
+export const StaticTile = (props) => {
+
+  const { 
+    className, 
+    children,
+    empty,
+    subtitle, 
+    title,
+    col, 
+    noGutter, 
+    gutter, 
+    gutterLeft, 
+    gutterRight, 
+    spacing,
+    ratio 
+  } = props;
+
+
+  const tileProps = {
+    ratio: ratio,
+    col: col,
+    noGutter: noGutter,
+    gutter: gutter,
+    gutterLeft: gutterLeft,
+    gutterRight: gutterRight
+  }
+
+  const classes = {
+    tile: 'StaticTile'
+  }
+
+  let TileComponent;
+  if (empty === true) {
+    TileComponent = (
+      <Tile className={classes.tile} {...tileProps}>
+        {children}
+      </Tile>
+    );
+  } else {
+    TileComponent = (
+      <Tile className={classes.tile} {...tileProps}>
+        {children}
+      </Tile>
+    );
+  }
+
+
+  return(
+    <>{TileComponent}</>
+  );
+}
+
+StaticTile.defaultProps = {
+  ratio: false,
+  noGutter: true,
+  spacing: false
+  // gutter: false,
+  // subtitle: undefined,
+  // title: 'Title',
+};
+
+
+
 
 
 const Subtitle = props => {

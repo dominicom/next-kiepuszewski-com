@@ -28,6 +28,8 @@ export default function Callout(props) {
     root: cn(styles.module, 'Callout'),
     // container: cn('Callout-container', 'Block-container', 'container', theme && theme || defaultTheme),
     container: 'Callout-container',
+    leftColumn: 'Callout-left-column',
+    rightColumn: 'Callout-right-column',
     heading: cn(styles.heading,'Callout-heading'),
     paragraph: cn(styles.parapgragh, 'Callout-paragraph', 'ExpressiveParagraph')
   }
@@ -35,14 +37,14 @@ export default function Callout(props) {
   return(
     <Grid className={classes.root} theme={theme}> 
       <Row className={classes.container}>
-        <Column {...column.left}> 
+        <Column className={classes.leftColumn} {...column.left}> 
           <h3 className={styles.heading}>
             {heading}
           </h3>
 
         </Column>
 
-        <Column {...column.right}>
+        <Column className={classes.rightColumn} {...column.right}>
           <p className={classes.paragraph}>
             {paragraph}
           </p>

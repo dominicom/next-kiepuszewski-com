@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { Logo } from 'components/Brand';
+import { Identity } from 'components/Brand';
+
 import { pages } from 'utils/settings';
 import { cn } from 'utils/helpers';
 
@@ -32,7 +33,7 @@ export const HomeButton = ({ onClick, to, theme }) => {
     <Component href={route.href} className="Header-item">
       <a className={classes.root} onClick={onClick} >
         <div className={classes.container}>
-          <Logo />
+          <Identity.Dmark />
         </div>
       </a>
     </Component>

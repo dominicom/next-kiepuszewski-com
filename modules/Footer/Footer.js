@@ -1,6 +1,6 @@
 import React from 'react'
 // import Image from 'next/image'
-import { Logo } from 'components/Brand';
+import { Identity } from 'components/Brand';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
@@ -17,7 +17,7 @@ export default function Footer() {
         >
           <p>Powered by{' '}</p>
           <span className={styles.logo}>
-            <Logo />
+            <Identity.Dmark />
           </span>
         </a>
       </div>

@@ -4,6 +4,16 @@
 .module {
   padding-top: 4rem;
   padding-bottom: 4rem;
+
+  [class*="--row"] {
+    margin-bottom: 2rem;
+  }
+  :global {
+    .Callout-left-column {
+      margin-bottom: 2rem;
+    }
+  }
+
 }
 
 .heading {

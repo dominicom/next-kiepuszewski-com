@@ -16,6 +16,7 @@ export default function Card(props) {
     dark, 
     ratio, 
     nospacing, 
+    gutter,
     minicard,
     staticCard
   } = props;
@@ -85,7 +86,7 @@ export default function Card(props) {
 
 Card.defaultProps = {
   ratio: true,
-  noGutter: true,
+  // nospacing: false,
   //gutter: false,
   // subtitle: 'Subtitle',
   title: 'Title',

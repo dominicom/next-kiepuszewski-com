@@ -46,7 +46,7 @@ $card-gutter: $space-02;
   .Card-container {
     min-height: 4rem;
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     .Tile {
       width: 100%;
       height: 100%;

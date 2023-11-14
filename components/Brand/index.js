@@ -1,4 +1,6 @@
-import { Logo } from './Logo/Logo';
-import { Signature } from './Signature/Signature';
+import { Logo } from './Logo';
+import { Signature } from './Identity/Signature';
 
-export { Logo, Signature };
+import Identity from './Identity';
+
+export { Identity, Logo, Signature };

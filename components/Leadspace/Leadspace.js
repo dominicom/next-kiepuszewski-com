@@ -13,13 +13,13 @@ export default function Leadspace(props) {
     left: {
       col: 8, 
       colSm: 4,
-      colMd: 8, 
+      colMd: 4, 
       colLg: 8,
     },
     right: {
       col: 4, 
       colSm: 4,
-      colMd: 8, 
+      colMd: 4, 
       colLg: 4,
     }
   }

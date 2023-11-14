@@ -7,7 +7,7 @@ import * as grid from 'styles/renderColumns';
 
 
 import styles from './Layout.module.scss';
-// import './Column.scss';
+
 
 
 
@@ -19,7 +19,8 @@ export default function Column(props) {
   // Consider Sm
 
   const {
-      id, 
+      id,
+      className,
       children, 
       empty,
       flex, 
@@ -51,6 +52,7 @@ export default function Column(props) {
 
   const classes = 
     cn(
+      className && className,
       'dtm--column',
       flex && 'dtm--row',
       styles.column, 

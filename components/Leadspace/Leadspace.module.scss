@@ -4,12 +4,16 @@
 .module {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  [class*="--row"] {
+    margin-bottom: 2rem;
+  }
 }
 
 .heading {
   font-size: calc(3.25rem + 0.5vw);
   font-weight: 300;
   line-height: 1.3;
+  margin: 0;
   p {
     font-size: inherit !important;
     font-weight: inherit !important;

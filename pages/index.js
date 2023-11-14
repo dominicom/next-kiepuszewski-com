@@ -4,13 +4,17 @@ import { useRouter } from 'next/router'
 // import Image from 'next/image'
 
 import { Grid, Row, Column } from 'layout'
-import { Button, Callout, Card, ImageCard, Leadspace } from 'components'
+import { Button, Callout, Card, ImageCard, Leadspace, Tile, ClickableTile, StaticTile } from 'components'
+
 import { Defaultpage } from 'templates/Defaultpage'
 
+import Hyphens from 'components/Brand/Hyphens';
+import Logo from 'components/Brand/Logo'
 
 import Intro from 'components/Intro'
 
 import Section from 'containers/Section'
+
 
 
 
@@ -28,6 +32,20 @@ export default function Home() {
 
       <Intro />
 
+      {/* <Grid>
+        <Row>
+          <Tile ratio>
+            This is test Tile, not sure what kind of Tile
+          </Tile>
+          <StaticTile ratio>
+            This is test Static Tile
+          </StaticTile>
+          <ClickableTile ratio>
+            This is test Clickable Tile
+          </ClickableTile>
+        </Row>
+      </Grid> */}
+
       <Leadspace 
         heading={
           <>
@@ -38,6 +56,7 @@ export default function Home() {
         }
       
       />
+
 
 
 
@@ -70,51 +89,125 @@ export default function Home() {
       </Callout>
 
 
+      {/* <Grid> 
+        <Row>
+          <Column col={2} colSm={2} colMd={2} colLg={2}>
+            <Hyphens.Work />
+          </Column>
+          <Column col={2} colSm={2} colMd={2} colLg={2}>
+            <Hyphens.Work />
+          </Column>
+          <Column col={2} colSm={2} colMd={2} colLg={2}>
+            <Hyphens.Work />
+          </Column>
+          <Column col={2} colSm={2} colMd={2} colLg={2}>
+            <Hyphens.Work />
+          </Column>
+        </Row>
+        <Row className="Section-hero">
+          <Column col={8} colSm={4} colMd={4} colLg={6}>
+            <p className="ExpressiveParagraph">
+            
+                We welcome all feedback, designs, or ideas in order to produce the best possible experience for our users. 
+                If you{`’`}re interested in contributing, check out our contributing guidelines to get started.
+              
+            </p> 
+          </Column>
+          <Column col={4} colSm={4} colMd={4} colLg={6}>
+            <Card
+              title="See all work"
+              href="/portfolio"
+              subtitle={false}
+              dark
+              // col={4} colSm={2} colMd={4} colLg={4}
+              ratio="2x1"
+            >
+              <p>Explore more work and all my portfolio and enjoy it!</p>
+            </Card>
+          </Column>
+        </Row>
+      </Grid> */}
 
 
+      <Section id="work">
+      <Row>
+          <Column col={2} colSm={2} colMd={2} colLg={2}>
+            <Hyphens.Work />
+          </Column>
+          <Column col={2} colSm={2} colMd={2} colLg={2}>
+            <Hyphens.Work />
+          </Column>
+          <Column col={2} colSm={2} colMd={2} colLg={2}>
+            <Hyphens.Work />
+          </Column>
+          <Column col={2} colSm={2} colMd={2} colLg={2}>
+            <Hyphens.Work />
+          </Column>
+        </Row>
+        <Row>
+          <Column col={8} colSm={4} colMd={4} colLg={8}>
+            <p className="ExpressiveParagraph">
+            
+                We welcome all feedback, designs, or ideas in order to produce the best possible experience for our users. 
+                If you{`’`}re interested in contributing, check out our contributing guidelines to get started.
+              
+            </p> 
+          </Column>
+          <Column col={4} colSm={4} colMd={4} colLg={4}>
+            <Card
+              title="See all work"
+              href="/portfolio"
+              subtitle={false}
+              
+              // col={4} colSm={2} colMd={4} colLg={4}
+              ratio="2x1"
+            >
+              <p>Explore more work and all my portfolio and enjoy it!</p>
+            </Card>
+          </Column>
+        </Row>
 
-      <Section id="work" hero>
-        {/* <h1 className={styles.title}>
-          Welcome, Welcome!
-        </h1>
-        <h2>Everybody is welcome!</h2> */}
         <Row>
           <ImageCard col={4} colMd={8} colLg={4} image="https://assets2.ello.co/uploads/asset/attachment/6324579/ello-optimized-c67792d8.jpg" ratio="1x1" dark />
           <ImageCard col={4} image="https://assets1.ello.co/uploads/asset/attachment/6324583/ello-optimized-ee700a52.jpg" ratio="2x1" dark />
         </Row>
         
         <Row>
-          
-
           <Column col={4} colMd={8} colLg={4} noGutter>
             <Card ratio="2x1" dark />
             <Card ratio="2x1" dark />
           </Column>
           
-          <Card ratio="2x1" col={8} colMd={8} colLg={4} dark />
-          <Column col={4} colMd={8} colLg={4} empty />
+          <Card ratio="2x1" col={8} colMd={8} colLg={4} dark noGutter />
+
+          <StaticTile col={4} colMd={8} colLg={4} ratio>
+            <p className="ExpressiveParagraph-02" style={{ fontSize: '7.5vw' }}>Some Text here →</p> 
+          </StaticTile>
           
+
+
+          <Column col={4} colMd={4} colLg={4} noGutter>
+            <Card ratio="1x1" dark />
+            <Card ratio="2x1" dark />
+          </Column>
 
           <Column col={4} colMd={4} colLg={4} noGutter>
             <Card ratio="1x2" dark />
           </Column>
-          <Column col={4} colMd={4} colLg={4} noGutter>
-            <Card ratio="1x1" dark />
-            <Card ratio="1x1" dark />
-          </Column>
+
           <Column col={4} colMd={8} colLg={4} noGutter>
             <Card ratio="2x1" dark />
             <Card ratio="1x1" dark />
           </Column>
 
-          <Card ratio="4x3" col={8} colMd={8} colLg={8} dark />
+          <Card ratio="4x3" col={8} colMd={8} colLg={8} noGutter dark/>
         </Row>
       </Section>
 
 
 
 
-      <Grid id="work" theme="g20">
+      <Grid theme="g20">
         <Row>
             <Card
               title="See what i&#39;m doing &rarr;"
@@ -158,8 +251,29 @@ export default function Home() {
 
       </Grid>
 
+      <Section id="about">
+        <Row>
+          <Column col={6}>
+            <h3>Clients</h3>
+          </Column>
+          <Column col={6} noGutter>
+            <CardGroup>
+              <Tile col={2} ratio="1x1" dark>
+                <Logo.AirHelp />
+              </Tile>
+              <Tile col={2} ratio="1x1" dark>
+                <Logo.OKE />
+              </Tile>
+              <Tile col={2} ratio="1x1" dark>
+                <Logo.Straumann />
+              </Tile>
+            </CardGroup>
+          </Column>
+        </Row>
+      </Section>
 
-      <Grid id="contact">
+
+      <Section id="contact">
         <Row>
           <Column col={4} colSm={4} colMd={4} colLg={6}>
             <p className="ExpressiveParagraph">
@@ -174,16 +288,26 @@ export default function Home() {
               title="Test page &rarr;"
               href="/test"
               subtitle={false}
-              // col={4} colSm={2} colMd={4} colLg={4}
+              dark
               ratio="2x1"
             >
-              <p>This tets page with markdown dynamically loaded.</p>
+              <p>This test page with markdown dynamically loaded.</p>
             </Card>
           </Column>
         </Row>
-      </Grid>
+      </Section>
 
 
     </Defaultpage>
+  )
+}
+
+
+
+const CardGroup = ({ children, column }) => {
+  return (
+    <div className="CardGroup" style={{ display: 'flex', width: '100%' }}>
+      {children}
+    </div>
   )
 }

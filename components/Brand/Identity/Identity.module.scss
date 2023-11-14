@@ -1,4 +1,37 @@
-@import '../../../styles/variables.scss';
+@import 'styles/variables.scss';
+
+$logo-size: 3.75rem;
+
+.Dmark {
+  width: $logo-size;
+  height: $logo-size;
+  transition: background 150ms ease-in;
+  .logo-box {
+    width: 100%;
+    height: 100%;
+  }
+
+  // &.active {
+  //   svg {
+  //     fill: currentColor;
+  //   }
+  // }
+  
+  svg {
+    transition: fill 150ms ease-in;
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+}
+
+// @media screen and (max-width: $layout-lg) {
+//   .Logo {
+//     left: 1em;
+//   }
+// }
+
+
 
 .dtm-PersonaLogo {
   margin: -0.05em 0;
