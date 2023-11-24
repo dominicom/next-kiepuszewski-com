@@ -1,5 +1,7 @@
+import { useContext, useEffect, useState } from 'react'
 import Head from 'next/head'
 import { Main } from 'modules'
+import { store } from 'context/store.js';
 
 
 
@@ -7,10 +9,16 @@ import { Main } from 'modules'
 export const Defaultpage = props => {
   const { children, hero, theme } = props
 
+  const { state, dispatch } = useContext(store);
+
   const mainProps = { 
     hero: hero,
     theme: theme,
   }
+
+  useEffect(() => {
+    dispatch({ type: 'set header global' });
+  }, []);
 
   return(
     <Main {...mainProps}>

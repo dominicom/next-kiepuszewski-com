@@ -17,7 +17,15 @@
   display: flex;
   margin: { right: $space-02; bottom: $space-02 };
   pointer-events: auto;
-  background-color: $white;
+  backdrop-filter: blur(24px) saturate(20%) contrast(150%); // hue-rotate(60deg); //invert(80%);
+
+  .MenuItem {
+    // TODO: dark and light theme
+    color: $gray-60;
+    background-color: rgb($white, 0.12);
+    
+  }
+  // background-color: $white;
   transition: background-color 150ms, box-shadow 150ms;
   // box-shadow: $elev-100;
   // &:hover {

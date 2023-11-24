@@ -12,14 +12,20 @@
   :global {
     .HomeButton-container {
       
-      color: $white;
+      // color: $white;
       background-color: transparent;
       padding: 0;
       width: 100%;
       height: 100%;
+      svg {
+        width: 100%;
+        height: 100%;
+        // color: transparent;
+        // backdrop-filter: blur(24px);
+      }
       &.active {
-        color: $gray-80;
-        background-color: $white;
+        // color: $gray-80;
+        // background-color: $white;
         padding: $space-16;
       }
 

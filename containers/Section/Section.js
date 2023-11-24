@@ -6,6 +6,13 @@ import styles from './Section.module.scss'
 
 const defaultTheme = ""
 
+
+/*
+    @SEE ALSO: scrollable section
+    https://bitbucket.org/dominicom/kiepuszewski-com/src/develop/src/components/ScrollableSection/ScrollableSection.js
+
+*/
+
 export default function Section(props) {
   const { 
     id,

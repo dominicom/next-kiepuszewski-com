@@ -1,3 +1,27 @@
+export const routes = [
+  {
+    name: 'Home',
+    href: '/'
+  },
+  {
+    name: 'Work',
+    href: '/#work',
+    as: '/#work'
+  },
+  {
+    name: 'About',
+    href: '/#about',
+    as: '/#about'
+  },
+  {
+    name: 'Contact',
+    href: '/#contact',
+    as: '/#contact'
+  },
+]
+
+
+
 export const pages = [
   {
     name: 'Home',

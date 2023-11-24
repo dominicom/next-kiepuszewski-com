@@ -53,8 +53,14 @@ export default function Tile(props) {
   )
 
   let TileComponent;
-  /*
-  if (isLink === true) {
+
+  if (clickable) {
+    TileComponent = (
+      <a href={href} className={classes.tile}>
+        {TileContainer}
+      </a>
+    );
+  } else if (clickable && isLink === true) {
     TileComponent = (
       <Link href={href}>
         <a className={classes.tile}>
@@ -64,33 +70,11 @@ export default function Tile(props) {
     );
   } else {
     TileComponent = (
-      <a href={href} className={classes.tile}>
-        {TileContainer}
-      </a>
-    );
-  }
-  if (!href) {
-    TileComponent = (
       <div className={classes.tile}>
         {TileContainer}
       </div>
     );
   }
-*/
-
-if (clickable) {
-  TileComponent = (
-    <a href={href} className={classes.tile}>
-      {TileContainer}
-    </a>
-  );
-} else {
-  TileComponent = (
-    <div className={classes.tile}>
-      {TileContainer}
-    </div>
-  );
-}
 
   // TODO: to consider if Column feature is needed
 

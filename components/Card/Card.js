@@ -63,7 +63,7 @@ export default function Card(props) {
     <div className={classes.card}>
       <div className={classes.aspect}>
         <div className={classes.container}>
-            <Tile {...tileProps} >
+            <Tile {...tileProps} clickable>
               {children}
               {Action}
             </Tile>

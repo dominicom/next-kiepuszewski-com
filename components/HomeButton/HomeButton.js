@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Identity } from 'components/Brand';
 
@@ -23,10 +23,11 @@ const Component = ({ children, href, className }) => {
 }
 
 export const HomeButton = ({ onClick, to, theme }) => {
+  const [ active, setActive ] = useState(true);
 
   const classes = {
     root: cn(styles.module, 'Home-button', 'Header-item'),
-    container: cn('HomeButton-container', 'active')
+    container: cn('HomeButton-container MenuItem', active && 'active')
   }
   
   return(

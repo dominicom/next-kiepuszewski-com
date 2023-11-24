@@ -6,9 +6,10 @@
 // import { NavLink, Link, useLocation, useHistory } from 'react-router-dom';
 // import { useLocation, useHistory } from 'react-router-dom';
 import Link from 'next/link';
+
 import { cn } from 'utils/helpers';
-import { pages } from 'utils/settings';
-import { useRouter } from "next/router";
+import { pages, routes } from 'utils/settings';
+import { useRouter } from 'next/router'
 import { Work, About, Contact } from './Items';
 import { HeaderItem } from 'modules/Header';
 
@@ -17,7 +18,7 @@ import styles from './Menu.module.scss';
 // ToDo menu items populatd on mobile devices 
 // const compactNavigation = pages;
 
-const navigation = pages.filter(item => (item.name !== "Home"));
+const navigation = routes.filter(item => (item.name !== "Home"));
 
 export function Menu(props) {
 
@@ -33,9 +34,16 @@ export function Menu(props) {
   return (
     <>
       <nav className={classes.root}>
-
-          {/* {navigation.map((link,i) => <NavLink key={i} className={cn(styles.link, router.pathname === link.href && styles.active)} onClick={props.onClick} {...link} />)} */}
-          {navigation.map((link,i) => <NavLink key={i} activeClassName={router.pathname === link.href && 'selected'} onClick={props.onClick} {...link} label={link.name} />)}
+          {navigation.map((link,i) => (
+            <NavLink 
+              key={i} 
+              href={link.href}
+              activeClassName={router.pathname === link.href && 'selected'} 
+              onClick={props.onClick} 
+              {...link} 
+              label={link.name} 
+            />
+          ))}
       </nav>
 
     </>
@@ -43,19 +51,65 @@ export function Menu(props) {
 }
 
 const NavLink = props => {
-  // const {} = props;
+  const {
+    href
+  } = props;
+
+  const router = useRouter();
+
+  // let isHash;
+  // if (href !== undefined) {
+  //   isHash = href.charAt(1) === '#';
+  // }
+
+  let url = href;
+  const hash = url.split('#')[1];
+  const pathname = url.split('#')[0];
+  
+  const isHash = (url) => {
+    if (url.indexOf('#') !== -1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  console.log("pathname:", pathname, "hash:", hash, ": is #  :", isHash(url));
+
 
   // ToDo aria labels, alt texts
   const classes = cn(styles.item, props.label, 'MenuItem', 'menu-link', 'inverted', 'themed-color', props.activeClassName);  // , selected ? "selected" : "", hash, selected  && "selected"
-  return( 
-    <HeaderItem>
-      <Link {...props}>
+
+
+  // onClick={() => {
+  //   router.push({
+  //     pathname: "/",
+  //     hash: "work"
+  //   });
+  // }}
+  let LinkElement;
+
+  if (isHash) {
+    LinkElement = (
+      <a className={classes} aria-label={props.label}>
+        <MenuNavElement label={props.label} />
+      </a>
+    );
+  } else {
+    LinkElement = (
+      <Link {...props}>  
         <a className={classes} aria-label={props.label}>
           <MenuNavElement label={props.label} />
         </a>
-        {/* <div>
-          <a className={props.className} onClick={props.onClick}>{props.name}</a>
-        </div> */}
+      </Link>
+    );
+  }
+  return( 
+    <HeaderItem>
+      <Link {...props}>  
+        <a className={classes} aria-label={props.label}>
+          <MenuNavElement label={props.label} />
+        </a>
       </Link>
     </HeaderItem>
   );

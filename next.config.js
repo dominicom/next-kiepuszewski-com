@@ -23,6 +23,9 @@ const nextConfig = {
 
 module.exports = {
   nextConfig,
+  experimental: {
+    externalDir: true,
+  },
   exportPathMap: async function (
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }

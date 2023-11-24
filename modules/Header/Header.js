@@ -1,9 +1,10 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useContext, useState, useEffect, useCallback } from 'react';
 // import { useHover } from 'utils/hooks';
 
 import { cn } from 'utils/helpers';
 // import { HomeButton } from './HomeButton';
 // import { MenuItem } from 'components/Menu';
+import { store } from 'context/store.js';
 
 import { HomeButton } from 'components/HomeButton';
 import { HeaderItem } from 'modules/Header';
@@ -24,8 +25,11 @@ const Header = ({
     isHover,
     isHoverHomeButton 
   }) => {
-    
-  const [scrollY, setScrollY] = useState(0);
+  const { state, dispatch } = useContext(store);  
+  const [ scrollY, setScrollY ] = useState(0);
+  const [ active, setActive ] = useState(state.headerIsActive);
+
+  
 
   const onScroll = useCallback(event => {
     const { pageYOffset, scrollY } = window;
@@ -34,13 +38,21 @@ const Header = ({
   }, []);
 
   useEffect(() => {
+    console.log("unmount state:", state);
+
     //add eventlistener to window
     window.addEventListener("scroll", onScroll, { passive: true });
     // remove event on unmount to prevent a memory leak with the cleanup
     return () => {
        window.removeEventListener("scroll", onScroll, { passive: true });
     }
+    
   }, []);
+
+  useEffect(() => {
+    console.log("unmount state:", state.headerIsActive);
+    setActive(state.headerIsActive);
+  }, [state.headerIsActive]);
   // const [hoverRef, isHovered] = useHover();
 
   // useEffect(
@@ -51,7 +63,7 @@ const Header = ({
   // );
 
   const classes = {
-    root: cn(styles.module, 'Header-module'), // ToDo -> context and possible classes: isHover.homeButton && !global && "hovered", "Header", "Header-container"
+    root: cn(styles.module, 'Header-module', active ? styles.active : styles.global), // ToDo -> context and possible classes: isHover.homeButton && !global && "hovered", "Header", "Header-container"
     navigationModule: cn(styles.container, 'Header--navigation-module')
   }
 
