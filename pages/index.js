@@ -263,7 +263,7 @@ export default function Home() {
             <h3>Clients</h3>
           </Column>
           <Column col={6} noGutter>
-            <CardGroup>
+            {/* <CardGroup>
               <Tile col={2} ratio="1x1" dark>
                 <Logo.AirHelp />
               </Tile>
@@ -273,7 +273,7 @@ export default function Home() {
               <Tile col={2} ratio="1x1" dark>
                 <Logo.Wiha />
               </Tile>
-            </CardGroup>
+            </CardGroup> */}
           </Column>
         </Row>
       </Section>
