@@ -5,11 +5,17 @@ const sass = require("sass");
 /**
  * @type {import('next').NextConfig}
  */
+
+// routing issues on the server
+// https://github.com/vercel/next.js/discussions/49768
+
+// https://stackoverflow.com/questions/62867105/how-to-deal-with-nextjs-exporting-files-with-html-extension-but-inlink-there
+// https://stackoverflow.com/questions/54838373/next-js-htaccess-file
 const nextConfig = {
   output: 'export',
  
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
-  // trailingSlash: true,
+  trailingSlash: true,
  
   // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
   // skipTrailingSlashRedirect: true,
@@ -22,7 +28,8 @@ const nextConfig = {
 
 
 module.exports = {
-  nextConfig,
+  output: 'export',
+  trailingSlash: true,
   experimental: {
     externalDir: true,
   },
@@ -30,12 +37,18 @@ module.exports = {
     defaultPathMap,
     { dev, dir, outDir, distDir, buildId }
   ) {
+  /*
+      https://github.com/vercel/next.js/discussions/49768
+      Rewrites
+      https://nextjs.org/docs/pages/api-reference/next-config-js/rewrites
+  */
     return {
       '/': { page: '/' },
       '/work': { page: '/work' },
       '/about': { page: '/about' },
       '/contact': { page: '/contact' },
       '/test': { page: '/test' },
+      '/portfolio': { page: '/portfolio' },
     }
   },
   reactStrictMode: true,

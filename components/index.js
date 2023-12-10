@@ -1,3 +1,4 @@
+import { BumperSection } from './BumperSection'
 import { Button, IconButton } from './Button'
 import { Callout } from './Callout'
 import { Card, CardGroup, ImageCard } from './Card'
@@ -11,6 +12,7 @@ import { ClickableTile, StaticTile } from './Tile';
 
 
 export { 
+  BumperSection,
   Button,
   IconButton,
   Callout,

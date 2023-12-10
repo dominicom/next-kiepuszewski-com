@@ -23,7 +23,7 @@ export const Defaultpage = props => {
   return(
     <Main {...mainProps}>
       <Head>
-        <title>title from database</title>
+        <title>Default Page | [name here]</title>
         <meta name="description" content="tu jakis opis" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />

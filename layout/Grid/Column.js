@@ -92,5 +92,6 @@ export default function Column(props) {
 
 Column.defaultProps = {
   noGutter: false,
+  flex: false,
   // gutter: true,
 };

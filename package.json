@@ -8,7 +8,7 @@
     "start": "next start",
     "export": "next build && next export",
     "export outdir": "next build && next export -o outdir",
-    "deploy": "next build && next export && node ./scripts/deploy.js",
+    "deploy": "next build && next export && node ./scripts/apache.js",
     "lint": "next lint",
     "delete": "rm -rf node_modules && rm -rf out && rm -rf outdir",
     "refresh": "yarn delete && yarn install"

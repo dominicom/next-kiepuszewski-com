@@ -74,7 +74,7 @@ const NavLink = props => {
     }
   }
 
-  console.log("pathname:", pathname, "hash:", hash, ": is #  :", isHash(url));
+  // console.log("pathname:", pathname, "hash:", hash, ": is #  :", isHash(url));
 
 
   // ToDo aria labels, alt texts

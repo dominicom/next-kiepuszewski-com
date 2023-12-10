@@ -2,6 +2,7 @@ import { cn } from 'utils/helpers';
 // import Section from 'components/Section/Section';
 
 import { Grid } from 'layout'
+import { Button, Leadspace } from 'components'
 
 import PORTRAIT from './img/portrait_glitch.png';
 
@@ -21,32 +22,55 @@ export default function Intro() {
   const classes = {
     root: cn(styles.section, 'dtm-Hero', 'themed-background'),
     image: cn(styles.image, 'dtm-Hero--image'),
-    leadText: cn(styles.leadText, 'dtm-Hero--leadText'),
-    heading: cn(styles.heading, 'dtm-Hero--leadText--heading'),
   }
-
 
   return(
 
-      <section className={classes.root}>
-        <Grid>
-        <div className={classes.leadText}>
-          <div className={classes.heading}>
-            <h1>Hello,</h1>
-            <h2 className="leadText-changer">
-              {`I'm`}
-              {leadText.map((text, i) => <span key={i}>{text}</span>)}
-            </h2>
-          </div>
-        </div>
-        <div 
-          className={classes.image}
-          style={{ 
-            backgroundImage: `url(${PORTRAIT})`
-          }}
-        />
-        </Grid>
+      <div className={classes.root}>
+        <Leadspace 
+          heading={
+            <>
+                <p>Welcome, welcome.</p>
+                <p><strong>Everybody</strong> is welcome!</p>
+                <p>Take a seat and explore.</p>
+            </>
+          }
+          paragraph={false}
         
-      </section>
+        >
+          <Content />
+
+        </Leadspace>        
+      </div>
   )
+}
+
+
+
+const Content = () => {
+
+    const classes = {
+      image: cn(styles.image, 'dtm-Hero--image'),
+      leadText: cn(styles.leadText, 'dtm-Hero--leadText'),
+      heading: cn(styles.heading, 'dtm-Hero--leadText--heading'),
+    }
+  return(
+    <>
+      <div 
+        className={classes.image}
+        style={{ 
+          backgroundImage: `url(${PORTRAIT})`
+        }}
+      />
+      <div className={classes.leadText}>
+        <div className={classes.heading}>
+          <h1>Hello,</h1>
+          <h2 className="leadText-changer">
+            {`I'm`}
+            {leadText.map((text, i) => <span key={i}>{text}</span>)}
+          </h2>
+        </div>
+      </div>
+    </>
+  );
 }

@@ -234,6 +234,6 @@ const Subtitle = props => {
 const Title = props => {
   const { content } = props;
   return(
-    <h3 className="Tile-title">{content}</h3>
+    <h3 className="Tile-title ExpressiveHeading-01">{content}</h3>
   )
 }

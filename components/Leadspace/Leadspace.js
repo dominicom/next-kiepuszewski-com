@@ -27,6 +27,7 @@ export default function Leadspace(props) {
   const classes = {
     root: cn(styles.module, 'Leadspace'),
     // container: cn('Leadspace-container', 'Block-container', 'container', theme && theme || defaultTheme),
+    grid: cn('Leadspace-grid'),
     container: 'Leadspace-container',
     heading: cn(styles.heading,'Leadspace-heading'),
     paragraph: cn(styles.parapgragh, 'Leadspace-paragraph', 'ExpressiveParagraph')
@@ -34,7 +35,7 @@ export default function Leadspace(props) {
   // className={styles.root}
   return(
     <section className={classes.root} theme={theme}>
-      <Grid className={classes.root}> 
+      <Grid className={classes.grid}> 
         <Row className={classes.container}>
           <Column {...column.left}> 
             <h1 className={styles.heading}>
@@ -50,7 +51,11 @@ export default function Leadspace(props) {
         </Row>
 
         <Row className="--custom-space--">
-          <Column {...column.left} >
+          <Column>
+            {children}
+          </Column>
+          
+          {/* <Column {...column.left} >
             <p className={classes.paragraph}>
               {paragraph}
             </p>
@@ -58,13 +63,12 @@ export default function Leadspace(props) {
               <Button kind="primary" /> 
               <Button kind="secontary" />
             </div>
-          </Column>
-          <Column {...column.right}>
-            {/* <Card ratio="2x1" dark />
-            <Card ratio="2x1" dark /> */}
+          </Column> */}
+          {/* <Column {...column.right}>
+            <Card ratio="2x1" dark />
+            <Card ratio="2x1" dark />
 
-            {children}
-          </Column>
+          </Column> */}
         </Row>
       </Grid>
     </section>

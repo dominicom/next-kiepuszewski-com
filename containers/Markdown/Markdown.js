@@ -4,11 +4,17 @@ import dynamic from 'next/dynamic'
 import Image from 'components/Image'
 import { MDXProvider } from '@mdx-js/react'
 import { Grid, Row } from 'layout'
-import { Defaultpage } from 'templates/Defaultpage'
+// import { Defaultpage } from 'templates/Defaultpage'
 
 import styles from './Markdown.module.scss'
 
-const RowParapraph = ({ children }) => (<Row><p className={styles.paragraph}>{children}</p></Row>)
+const RowParapraph = ({ children }) => (
+    <Row>
+      <p className={styles.paragraph}>
+        {children}
+      </p>
+    </Row>
+  );
 
 // https://whoisryosuke.com/blog/2020/using-mdx-with-nextjs/
 // https://www.theviewport.io/post/using-nextjs-and-nextimage-with-mdx-markdown-processing

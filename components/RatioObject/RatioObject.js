@@ -5,6 +5,7 @@ export default function RatioObject(props) {
   const { 
     children,
     ratio,
+    className,
     // Todo: to consider these properties
     col, 
     noGutter, 

@@ -6,6 +6,9 @@ import Icon from 'components/Icon';
 
 import { cn } from 'utils/helpers';
 
+const Placeholder = () => (
+  <p>This is only <em>placeholder paragraph</em> for <strong>Card</strong> component. Replace it with your own content.</p>
+);
 
 
 export default function Card(props) {
@@ -86,10 +89,13 @@ export default function Card(props) {
 
 Card.defaultProps = {
   ratio: true,
+  children: <Placeholder />,
   // nospacing: false,
   //gutter: false,
   // subtitle: 'Subtitle',
-  title: 'Title',
-  ratio: "2x1",
+  title: 'Card Title',
+  ratio: '2x1',
   dark: false
 };
+
+

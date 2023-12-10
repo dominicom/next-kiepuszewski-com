@@ -23,7 +23,7 @@ import { Projectpage } from 'templates/Projectpage'
 
 
 export default function Portfolio({ meta, source }) {
-  //console.log(source, meta)
+  console.log("co to jest:", source, meta)
 
 
 

@@ -3,10 +3,22 @@ import { cn } from 'utils/helpers';
 import { Row } from 'layout/Grid';
 // import * as styles from './CardGroup.module.scss';
 
-const CardGroup = ({ children, className, ...rest }) => (
-  <Row className={cn(className, styles.row)} {...rest}>
+
+
+// styles.row
+
+// const Element = () => {
+
+// }
+
+const CardGroup = ({ children, className, asRow, asColumn, ...rest }) => (
+  <Row className={cn(className, "CardGroup")} {...rest}>
     {children}
   </Row>
 );
 
 export default CardGroup;
+
+CardGroup.defaultProps = {
+  asRow: true,
+}

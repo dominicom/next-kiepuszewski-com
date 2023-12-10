@@ -2,10 +2,15 @@
 @import 'styles/custom-media.scss';
 
 .module {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  // padding-top: 4rem;
+  // padding-bottom: 4rem;
   [class*="--row"] {
     margin-bottom: 2rem;
+  }
+  :global {
+    .Leadspace-grid {
+      padding-top: $spacer-m;
+    }
   }
 }
 

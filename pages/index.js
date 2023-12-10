@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -9,12 +10,12 @@ import { useRouter } from 'next/router'
 // import Map from '../../../fibre/fibre-icons/src/icons/react/Map';
 
 import { Grid, Row, Column } from 'layout'
-import { Button, Callout, Card, ImageCard, Leadspace, Tile, ClickableTile, StaticTile } from 'components'
-
+import { BumperSection, Button, Callout, Card, CardGroup, ImageCard, Leadspace, Tile, ClickableTile, StaticTile } from 'components'
+import { LogoGrid } from 'components/LogoGrid';
 import { Homepage } from 'templates/Homepage'
 
 import Hyphens from 'components/Brand/Hyphens';
-import Logo from 'components/Brand/Logo'
+
 
 import Intro from 'components/Intro'
 
@@ -37,31 +38,6 @@ export default function Home() {
       <Intro />
 
       
-
-      {/* <Grid>
-        <Row>
-          <Tile ratio>
-            This is test Tile, not sure what kind of Tile
-          </Tile>
-          <StaticTile ratio>
-            This is test Static Tile
-          </StaticTile>
-          <ClickableTile ratio>
-            This is test Clickable Tile
-          </ClickableTile>
-        </Row>
-      </Grid> */}
-
-      <Leadspace 
-        heading={
-          <>
-              <p>Welcome, welcome.</p>
-              <p><strong>Everybody</strong> is welcome!</p>
-              <p>Take a seat and explore.</p>
-          </>
-        }
-      
-      />
       
 
 
@@ -78,65 +54,29 @@ export default function Home() {
         }
       >
         <Button
-        kind="primary"
-        renderIcon="ArrowDown"
-        onClick={() => {
-            router.push({
-              pathname: "/",
-              hash: "work"
-            });
-          }}
+          kind="primary"
+          renderIcon="ArrowDown"
+          onClick={() => {
+              router.push({
+                pathname: "/",
+                hash: "work"
+              });
+            }}
         >        
           Static page with hash (good)
         </Button>
+
         <Button kind="secondary" renderIcon />
+
         <Button renderIcon="ExternalLink">Click me!</Button> 
 
       </Callout>
 
 
-      {/* <Grid> 
-        <Row>
-          <Column col={2} colSm={2} colMd={2} colLg={2}>
-            <Hyphens.Work />
-          </Column>
-          <Column col={2} colSm={2} colMd={2} colLg={2}>
-            <Hyphens.Work />
-          </Column>
-          <Column col={2} colSm={2} colMd={2} colLg={2}>
-            <Hyphens.Work />
-          </Column>
-          <Column col={2} colSm={2} colMd={2} colLg={2}>
-            <Hyphens.Work />
-          </Column>
-        </Row>
-        <Row className="Section-hero">
-          <Column col={8} colSm={4} colMd={4} colLg={6}>
-            <p className="ExpressiveParagraph">
-            
-                We welcome all feedback, designs, or ideas in order to produce the best possible experience for our users. 
-                If you{`’`}re interested in contributing, check out our contributing guidelines to get started.
-              
-            </p> 
-          </Column>
-          <Column col={4} colSm={4} colMd={4} colLg={6}>
-            <Card
-              title="See all work"
-              href="/portfolio"
-              subtitle={false}
-              dark
-              // col={4} colSm={2} colMd={4} colLg={4}
-              ratio="2x1"
-            >
-              <p>Explore more work and all my portfolio and enjoy it!</p>
-            </Card>
-          </Column>
-        </Row>
-      </Grid> */}
 
 
       <Section id="work">
-      <Row>
+        <Row>
           <Column col={2} colSm={2} colMd={2} colLg={2}>
             <Hyphens.Work />
           </Column>
@@ -159,6 +99,48 @@ export default function Home() {
               
             </p> 
           </Column>
+          {/* <Column col={4} colSm={4} colMd={4} colLg={4}>
+            <Card
+              title="See all work"
+              href="/portfolio"
+              subtitle={false}
+              
+              // col={4} colSm={2} colMd={4} colLg={4}
+              ratio="2x1"
+            >
+              <p>Explore more work and all my portfolio and enjoy it!</p>
+            </Card>
+          </Column> */}
+        </Row>
+
+        
+        
+        <Row>
+          <ImageCard col={4} colMd={8} colLg={4} image="https://images.unsplash.com/photo-1585298723682-7115561c51b7?q=80&w=3295&auto=format&fit=crop" ratio="1x1" dark />
+          <ImageCard col={4} image="https://images.unsplash.com/photo-1497500002367-5eabaa373843?q=80&w=2944&auto=format&fit=crop" ratio="2x1" dark />
+          <Column col={4} colMd={8} colLg={4} noGutter>
+            <Card ratio="2x1" noGutter dark />
+            <ImageCard ratio="1x1" image="https://images.unsplash.com/photo-1584457021185-49623a766992?q=80&w=2931&auto=format&fit=crop" />
+          </Column>
+        </Row>
+
+        <Row>
+          <Column col={4} colMd={4} colLg={4} noGutter>
+            <BumperSection block="nearest" row={false} />
+          </Column>
+        </Row>
+
+        <BumperSection block="nearest">
+          <StaticTile col={4} colMd={8} colLg={4}>
+          <p className="ExpressiveParagraph">
+            
+            We welcome all feedback, designs, or ideas in order to produce the best possible experience for our users. 
+            If you{`’`}re interested in contributing, check out our contributing guidelines to get started.
+          
+          </p> 
+
+          </StaticTile>
+
           <Column col={4} colSm={4} colMd={4} colLg={4}>
             <Card
               title="See all work"
@@ -171,13 +153,8 @@ export default function Home() {
               <p>Explore more work and all my portfolio and enjoy it!</p>
             </Card>
           </Column>
-        </Row>
-
-        <Row>
-          <ImageCard col={4} colMd={8} colLg={4} image="https://assets2.ello.co/uploads/asset/attachment/6324579/ello-optimized-c67792d8.jpg" ratio="1x1" dark />
-          <ImageCard col={4} image="https://assets1.ello.co/uploads/asset/attachment/6324583/ello-optimized-ee700a52.jpg" ratio="2x1" dark />
-        </Row>
-        
+        </BumperSection>
+        <BumperSection block="nearest"/>
         <Row>
           <Column col={4} colMd={8} colLg={4} noGutter>
             <Card ratio="2x1" dark />
@@ -197,6 +174,8 @@ export default function Home() {
             <Card ratio="2x1" dark />
           </Column>
 
+          
+
           <Column col={4} colMd={4} colLg={4} noGutter>
             <Card ratio="1x2" dark />
           </Column>
@@ -208,6 +187,7 @@ export default function Home() {
 
           <Card ratio="4x3" col={8} colMd={8} colLg={8} noGutter dark/>
         </Row>
+        
       </Section>
 
 
@@ -259,21 +239,14 @@ export default function Home() {
 
       <Section id="about">
         <Row>
-          <Column col={6}>
-            <h3>Clients</h3>
+          <Column col={4} colSm={4} colMd={8} colLg={4}>
+            <h3 className="ExpressiveHeading-02">Clients</h3>
+            <p className="CapitalizedParagraph-01">
+              Participated in corporate projects located on all over the world. Designed for brands like
+            </p> 
           </Column>
-          <Column col={6} noGutter>
-            {/* <CardGroup>
-              <Tile col={2} ratio="1x1" dark>
-                <Logo.AirHelp />
-              </Tile>
-              <Tile col={2} ratio="1x1" dark>
-                <Logo.OKE />
-              </Tile>
-              <Tile col={2} ratio="1x1" dark>
-                <Logo.Wiha />
-              </Tile>
-            </CardGroup> */}
+          <Column col={8} colSm={4} colMd={8} colLg={8}>
+            <LogoGrid />
           </Column>
         </Row>
       </Section>
@@ -281,13 +254,15 @@ export default function Home() {
 
       <Section id="contact">
         <Row>
-          <Column col={4} colSm={4} colMd={4} colLg={6}>
-            <p className="ExpressiveParagraph">
+          <Column col={4} colSm={4} colMd={4} colLg={6} noGutter>
+            <StaticTile>
+            <p className="CapitalizedParagraph-02">
             {<>
               We welcome all <em>feedback</em>, designs, or ideas in order to produce the best possible experience for our users. 
               If you{`’`}re interested in contributing, check out our contributing guidelines to get started.
             </>}
             </p> 
+            </StaticTile>
           </Column>
           <Column col={4} colSm={4} colMd={4} colLg={6}>
             <Card
@@ -310,10 +285,4 @@ export default function Home() {
 
 
 
-const CardGroup = ({ children, column }) => {
-  return (
-    <div className="CardGroup" style={{ display: 'flex', width: '100%' }}>
-      {children}
-    </div>
-  )
-}
+

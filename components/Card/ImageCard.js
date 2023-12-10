@@ -87,6 +87,6 @@ ImageCard.defaultProps = {
   noGutter: true,
   // gutter: false,
   // subtitle: 'Subtitle',
-  title: 'Title',
+  title: 'Image Card Title',
   dark: false
 };

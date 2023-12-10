@@ -1,5 +1,11 @@
 @import 'styles/variables.scss';
 
+
+[class*="tile"] {
+  width: 100%;
+  height: 100%;
+}
+
 .gutter {
   .Tile {
     margin: 0 0 2rem 0;
@@ -36,6 +42,7 @@
 a {
   &.Tile, 
   &.ClickableTile {
+    overflow: hidden;
     display: block;
     cursor: pointer;
   }
@@ -44,8 +51,7 @@ a {
   position: relative;
   transition: background-color 150ms ease;
   padding: 1rem;
-  width: 100%;
-  height: 100%;
+
   
   &:last-child {
     flex-grow: 1;
@@ -57,7 +63,7 @@ a {
     margin-bottom: 0.5rem;
   }
   .Tile-title {
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
     line-height: 1.3;
     font-weight: 300;
     margin-bottom: 1rem;

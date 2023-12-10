@@ -1,14 +1,15 @@
 import { useContext, useEffect, useState } from 'react'
 import Head from 'next/head'
-import { Main } from 'modules'
 import { store } from 'context/store.js';
+
+import { Main } from 'modules'
 
 
 
 export const Homepage = (props) => {
   const { children, hero, theme } = props
 
-  const { state, dispatch } = useContext(store);
+  const { dispatch } = useContext(store);
 
   const mainProps = { 
     hero: hero,
@@ -22,7 +23,7 @@ export const Homepage = (props) => {
   return(
     <Main {...mainProps}>
       <Head>
-        <title>title from database</title>
+        <title>Home Page | [name should be overridden here]</title>
         <meta name="description" content="tu jakis opis" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
